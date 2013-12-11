@@ -3,18 +3,34 @@ Ext.define('MOBservation.controller.navigation.CtNavigationLogin', {
     
     config: {
         refs: {
-            viewNavigationLogin : 'xNavigationLogin',
-            vwLogin             : 'xVwLogin'
+            vwNavigationLogin : 'xNavigationLogin',
+            vwLogin : 'xVwLogin'
         },
         control: {
-            viewNavigationLogin : {
-                'show' : 'onShowNavigationLogin'
+            vwNavigationLogin : {
+                'show' : 'onShowNavigationLogin',
+
+            },
+            vwLogin : {
+            	'LOGIN_TAP_NO_ACCOUNT' : 'onLoginTapNoAccount'
             }
         }
     },
+
     onShowNavigationLogin : function (navigationLoginView) {
-        navigationLoginView.removeAll();
-        var vwLogin = Ext.create('Login');
-        navigationLoginView.push(vwLogin);
+        this.showView('xVwLogin');
+    },
+
+    showView : function (alias) {
+    	var navigationLoginView = this.getVwNavigationLogin(),
+    		view = navigationLoginView.down(alias);
+
+    	if (view) view.destroy();
+    	view = Ext.create(alias);
+    	navigationLoginView.push(view);
+    },
+    
+    onLoginTapNoAccount : function () {
+    	this.showView('xVwLoginInformation');
     }
 });

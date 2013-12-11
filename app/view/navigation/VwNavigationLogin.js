@@ -6,7 +6,8 @@ Ext.define('MOBservation.view.navigation.VwNavigationLogin', {
     xtype: 'xNavigationLogin',
 
     requires : [
-        'MOBservation.view.login.VwLogin'
+        'MOBservation.form.login.VwLogin',
+        'MOBservation.view.login.VwLoginInformation'
     ],
 
     config : {

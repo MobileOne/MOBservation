@@ -745,10 +745,10 @@ Ext.ClassManager.addNameAlternateMappings({
   ],
   "MOBservation.controller.login.CtLogin": [],
   "MOBservation.controller.navigation.CtNavigationLogin": [],
-  "MOBservation.view.Main": [],
-  "MOBservation.view.login.VwLogin": [
+  "MOBservation.form.login.VwLogin": [
     "Login"
   ],
+  "MOBservation.view.Main": [],
   "MOBservation.view.navigation.VwNavigationLogin": []
 });
 Ext.ClassManager.addNameAliasMappings({
@@ -1695,11 +1695,11 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.viewport.WindowsPhone": [],
   "MOBservation.controller.login.CtLogin": [],
   "MOBservation.controller.navigation.CtNavigationLogin": [],
+  "MOBservation.form.login.VwLogin": [
+    "widget.xVwLogin"
+  ],
   "MOBservation.view.Main": [
     "widget.main"
-  ],
-  "MOBservation.view.login.VwLogin": [
-    "widget.xVwLogin"
   ],
   "MOBservation.view.navigation.VwNavigationLogin": [
     "widget.xNavigationLogin"

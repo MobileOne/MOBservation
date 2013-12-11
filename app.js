@@ -10,9 +10,6 @@
     will need to resolve manually.
 */
 
-// Enable the debugger in Chrome
-Ext.Loader.setConfig({disableCaching: false});
-
 Ext.application({
     name: 'MOBservation',
 
@@ -29,6 +26,10 @@ Ext.application({
         'navigation.CtNavigationLogin',
 
         'login.CtLogin'
+    ],
+
+    forms : [
+    	'login.VwLogin'
     ],
 
     icon: {
