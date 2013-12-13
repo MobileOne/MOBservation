@@ -18,13 +18,15 @@ Ext.application({
     ],
 
     views: [
-        'navigation.VwNavigationLogin'
+        'navigation.common.VwNavigation',
+        'navigation.VwNavigationLogin',
+        'navigation.VwNavigationMOBservation'
     ],
 
     controllers : [
-
+        'CtMain',
         'navigation.CtNavigationLogin',
-
+        'navigation.CtNavigationMOBservation',
         'login.CtLogin'
     ],
 
@@ -53,9 +55,6 @@ Ext.application({
     launch: function() {
         // Destroy the #appLoadingIndicator element
         Ext.fly('appLoadingIndicator').destroy();
-
-        // Initialize the main view
-        Ext.Viewport.add(Ext.create('MOBservation.view.navigation.VwNavigationLogin'));
     },
 
     onUpdated: function() {
