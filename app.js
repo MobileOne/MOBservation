@@ -27,7 +27,8 @@ Ext.application({
         'CtMain',
         'navigation.CtNavigationLogin',
         'navigation.CtNavigationMOBservation',
-        'login.CtLogin'
+        'login.CtLogin',
+        'mobservation.menu.CtMOBservationMenu'
     ],
 
     forms : [

@@ -7,48 +7,20 @@ Ext.define('MOBservation.view.mobservation.menu.VwMOBservationMenu', {
     xtype: 'xVwMOBservationMenu',
 
    	requires : [
-   		'Ext.Button'
+   		'Ext.Button',
+   		'MOBservation.view.mobservation.menu.carousel.VwMOBservationMenuCarousel',
+   		'Ext.Label'
 	],
 
 	config: {
 		items : [
 			{
-				xtype : 'container',
-				layout : 'hbox',
-				defaults : {
-					flex : 1,
-					xtype: 'button'
-				},
-				items : [
-					{
-						text : 'Button1'
-					},
-					{
-						text : 'Button2'
-					},
-					{
-						text : 'Button3'
-					}
-				]
+				xtype : 'label',
+				html : MOBservation_strings.mobservation_welcome
 			},
 			{
-				xtype : 'container',
-				layout : 'hbox',
-				defaults : {
-					flex : 1,
-					xtype: 'button'
-				},
-				items : [
-					{
-						text : 'Button1'
-					},
-					{
-						text : 'Button2'
-					},
-					{
-						text : 'Button3'
-					}
-				]
+				xtype : 'xVwMOBservationMenuCarousel',
+				height: '80%'
 			}
 		]
 	}

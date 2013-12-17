@@ -8,6 +8,7 @@ Ext.define('MOBservation.view.navigation.VwNavigationMOBservation', {
     xtype: 'xNavigationMOBservation',
 
     requires : [
-    	'MOBservation.view.mobservation.menu.VwMOBservationMenu'
+    	'MOBservation.view.mobservation.menu.VwMOBservationMenu',
+    	'MOBservation.form.mobservation.customer.VwMOBservationCustomer'
     ]
 });

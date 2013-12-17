@@ -10,5 +10,12 @@ MOBservation_strings = {
 	login_error_no_email : 'Vous devez renseigner un email pour vous connecter.',
 	login_error_no_password : 'Vous devez renseigner un mot de passe pour vous connecter',
 	login_information_label : 'Créer un compte MOBservation',
-	login_information_description : 'This page lists direct English translations of common Latin phrases, such as veni vidi vici and et cetera. Some of the phrases are themselves translations of Greek phrases, as Greek rhetoric and literature were highly regarded in ancient Rome when Latin rhetoric and literature were still maturing. The Latin letter i can be used as either a vowel or a consonant. When used as a consonant, it is often replaced by the letter j, which was originally simply an orthographic "long i" that was used in initial positions and when it occurred between two other vowels. This convention from Medieval Latin is most commonly preserved in Latin legal terminology—hence phrases like de iure are often spelled de jure. On these lists, the more common form is used: thus, de jure is used instead of de iure, and alea iacta est instead of alea jacta est. To view all phrases on a single, lengthy document, see.'
+	login_information_description : 'This page lists direct English translations of common Latin phrases, such as veni vidi vici and et cetera. Some of the phrases are themselves translations of Greek phrases, as Greek rhetoric and literature were highly regarded in ancient Rome when Latin rhetoric and literature were still maturing. The Latin letter i can be used as either a vowel or a consonant. When used as a consonant, it is often replaced by the letter j, which was originally simply an orthographic "long i" that was used in initial positions and when it occurred between two other vowels. This convention from Medieval Latin is most commonly preserved in Latin legal terminology—hence phrases like de iure are often spelled de jure. On these lists, the more common form is used: thus, de jure is used instead of de iure, and alea iacta est instead of alea jacta est. To view all phrases on a single, lengthy document, see.',
+	mobservation_disconnect  :'Déconnexion',
+	mobservation_take_picture : 'Prendre une photo',
+	mobservation_get_sound : 'Capturer un son',
+	mobservation_list_pictures : 'Liste des photos',
+	mobservation_list_sounds : 'Liste des sons',
+	mobservation_customer : 'Fiche client',
+	mobservation_welcome : 'Bienvenue sur l\'application MOBservation'
 };

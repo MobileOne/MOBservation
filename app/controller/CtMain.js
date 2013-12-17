@@ -9,6 +9,9 @@ Ext.define('MOBservation.controller.CtMain', {
         control: {
             vwNavigationLogin : {
             	'LOGIN_COMPLETED' : 'onLoginCompleted'
+            },
+            vwNavigationMOBservation : {
+                'USER_DISCONNECTED' : 'onUserDisconnected'
             }
         }
     },
@@ -22,5 +25,8 @@ Ext.define('MOBservation.controller.CtMain', {
     },
     onLoginCompleted : function (viewLogin) {
         this.showView('xNavigationMOBservation');
+    },
+    onUserDisconnected : function (vwNavigationMOBservation){
+        this.showView('xNavigationLogin');
     }
 });
