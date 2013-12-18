@@ -4,7 +4,9 @@ Ext.define('MOBservation.controller.navigation.CtNavigationMOBservation', {
     config: {
         refs: {
             navigationView : 'xNavigationMOBservation',
-            vwMOBservationMenu : 'xVwMOBservationMenu'
+            vwMOBservationMenu : 'xVwMOBservationMenu',
+            vwMOBservationCustomersList : 'xVwMOBservationCustomersList',
+            vwMOBservationPicturesList     : 'xVwMOBservationPicturesList'
         },
         control: {
             navigationView : {
@@ -12,7 +14,15 @@ Ext.define('MOBservation.controller.navigation.CtNavigationMOBservation', {
             },
             vwMOBservationMenu : {
                 'DISCONNECT' : 'onUserDisconnect',
-                'CUSTOMER'   : 'onSelectCustomer'
+                'CUSTOMERS'   : 'onSelectCustomers',
+                'OBSERVATIONS' : 'onSelectObservations',
+                'LIST_PICTURES' : 'onListPictures'
+            },
+            vwMOBservationCustomersList : {
+                'CUSTOMER_SELECTED' : 'onCustomerSelected'
+            },
+            vwMOBservationPicturesList : {
+                'PICTURE_SELECTED' : 'onPictureSelected'
             }
         }
     },
@@ -22,7 +32,20 @@ Ext.define('MOBservation.controller.navigation.CtNavigationMOBservation', {
     onUserDisconnect : function (viewMOBservationMenu) {
         this.getNavigationView().fireEvent('USER_DISCONNECTED', this.getNavigationView());
     },
-    onSelectCustomer : function (viewMOBservationMenu){
-        this.showView('xVwMOBservationCustomer');
+    onSelectCustomers : function (viewMOBservationMenu) {
+        this.showView('xVwMOBservationCustomersList');
+    },
+    onCustomerSelected : function (vwMOBservationCustomersList) {
+        this.getNavigationView().pop();
+        this.getVwMOBservationMenu().setCurrentCustomer(MOBservation.app.context.getCurrentCustomer());
+    },
+    onSelectObservations : function (viewMOBservationMenu) {
+        this.showView('xVwMOBservationObservationsList');
+    },
+    onListPictures : function (viewMOBservationMenu) {
+        this.showView('xVwMOBservationPicturesList');
+    },
+    onPictureSelected : function (viewMOBservationMenu, pictureModel) {
+        alert('picture selected');
     }
 });

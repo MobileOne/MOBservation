@@ -40,16 +40,14 @@
      */
     "js": [
 		{
-			"path": "cordova.js",
-			"remote": true
+			"path": "cordova.js"
 		},
         {
             "path": "touch/sencha-touch.js",
             "x-bootstrap": true
         },
         {
-            "path": "resources/strings/app-fr_FR.js",
-            "x-bootstrap": true
+            "path": "strings/app-fr_FR.js"
         },
         {
             "path": "bootstrap.js",

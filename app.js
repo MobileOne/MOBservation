@@ -10,11 +10,17 @@
     will need to resolve manually.
 */
 
+Ext.require('Ext.device.Capture');
+Ext.require('Ext.device.Camera');
+
 Ext.application({
     name: 'MOBservation',
 
     requires: [
-        'Ext.MessageBox'
+        'Ext.MessageBox',
+
+        // Context
+        'MOBservation.context.Context'
     ],
 
     views: [
@@ -28,7 +34,22 @@ Ext.application({
         'navigation.CtNavigationLogin',
         'navigation.CtNavigationMOBservation',
         'login.CtLogin',
-        'mobservation.menu.CtMOBservationMenu'
+        'mobservation.menu.CtMOBservationMenu',
+        'mobservation.customers.CtMOBservationCustomersList',
+        'mobservation.observations.CtMOBservationObservationsList',
+        'mobservation.pictures.CtMOBservationPicturesList'
+    ],
+
+    models : [
+        'Customer',
+        'Observation',
+        'Picture'
+    ],
+
+    stores : [
+        'Customers',
+        'Observations',
+        'Pictures'
     ],
 
     forms : [
@@ -56,6 +77,8 @@ Ext.application({
     launch: function() {
         // Destroy the #appLoadingIndicator element
         Ext.fly('appLoadingIndicator').destroy();
+
+        this.context = Ext.create('MOBservation.context.Context');
     },
 
     onUpdated: function() {

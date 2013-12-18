@@ -9,6 +9,8 @@ Ext.define('MOBservation.view.navigation.VwNavigationMOBservation', {
 
     requires : [
     	'MOBservation.view.mobservation.menu.VwMOBservationMenu',
-    	'MOBservation.form.mobservation.customer.VwMOBservationCustomer'
+    	'MOBservation.view.mobservation.customers.VwMOBservationCustomersList',
+    	'MOBservation.view.mobservation.observations.VwMOBservationObservationsList',
+    	'MOBservation.view.mobservation.pictures.VwMOBservationPicturesList'
     ]
 });

@@ -13,6 +13,8 @@ Ext.define('MOBservation.view.mobservation.menu.VwMOBservationMenu', {
 	],
 
 	config: {
+		currentCustomer : null,
+		layout : 'vbox',
 		items : [
 			{
 				xtype : 'label',
@@ -20,8 +22,27 @@ Ext.define('MOBservation.view.mobservation.menu.VwMOBservationMenu', {
 			},
 			{
 				xtype : 'xVwMOBservationMenuCarousel',
-				height: '80%'
+				flex : 5
+			},
+			{
+				xtype : 'label',
+				name : 'customerInformation',
+				flex : 1
 			}
 		]
+	},
+	initialize : function(config){
+		this.initConfig(config);
+		this.updateCurrentCustomer(this.getCurrentCustomer());
+	},
+	updateCurrentCustomer : function (newValue){
+		var customerData = Ext.getStore('Customers').getCustomer(newValue),
+			customerInformation = MOBservation_strings.mobservation_no_selected_customer;
+		if (customerData){
+			customerInformation = MOBservation_strings.mobservation_customer_selection + customerData.firstName + " " + customerData.lastName;
+			this.down('xVwMOBservationMenuCarousel').setDisabledOldObservation(false);
+			this.down('xVwMOBservationMenuCarousel').setDisabledSendObservation(false);
+		}
+		this.down('label[name=customerInformation]').setHtml(customerInformation);
 	}
 });

@@ -743,13 +743,51 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.viewport.WindowsPhone": [
     "Ext.viewport.WP"
   ],
+  "MOBservation.context.Context": [],
+  "MOBservation.controller.CtMain": [],
   "MOBservation.controller.login.CtLogin": [],
+  "MOBservation.controller.mobservation.customers.CtMOBservationCustomersList": [],
+  "MOBservation.controller.mobservation.menu.CtMOBservationMenu": [],
+  "MOBservation.controller.mobservation.observations.CtMOBservationObservationsList": [],
+  "MOBservation.controller.mobservation.pictures.CtMOBservationPicturesList": [],
   "MOBservation.controller.navigation.CtNavigationLogin": [],
+  "MOBservation.controller.navigation.CtNavigationMOBservation": [],
+  "MOBservation.controller.navigation.common.CtNavigation": [],
   "MOBservation.form.login.VwLogin": [
-    "Login"
+    "xVwLogin"
   ],
+  "MOBservation.model.Customer": [],
+  "MOBservation.model.Observation": [],
+  "MOBservation.model.Picture": [],
+  "MOBservation.store.Customers": [],
+  "MOBservation.store.Observations": [],
+  "MOBservation.store.Pictures": [],
   "MOBservation.view.Main": [],
-  "MOBservation.view.navigation.VwNavigationLogin": []
+  "MOBservation.view.login.VwLoginInformation": [
+    "xVwLoginInformation"
+  ],
+  "MOBservation.view.mobservation.customers.VwMOBservationCustomersList": [
+    "xVwMOBservationCustomersList"
+  ],
+  "MOBservation.view.mobservation.menu.VwMOBservationMenu": [
+    "xVwMOBservationMenu"
+  ],
+  "MOBservation.view.mobservation.menu.carousel.VwMOBservationMenuCarousel": [
+    "xVwMOBservationMenuCarousel"
+  ],
+  "MOBservation.view.mobservation.observations.VwMOBservationObservationsList": [
+    "xVwMOBservationObservationsList"
+  ],
+  "MOBservation.view.mobservation.pictures.VwMOBservationPicturesList": [
+    "xVwMOBservationPicturesList"
+  ],
+  "MOBservation.view.navigation.VwNavigationLogin": [
+    "xNavigationLogin"
+  ],
+  "MOBservation.view.navigation.VwNavigationMOBservation": [
+    "xNavigationMOBservation"
+  ],
+  "MOBservation.view.navigation.common.VwNavigation": []
 });
 Ext.ClassManager.addNameAliasMappings({
   "Ext.AbstractComponent": [],
@@ -1693,15 +1731,51 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.viewport.Ios": [],
   "Ext.viewport.Viewport": [],
   "Ext.viewport.WindowsPhone": [],
+  "MOBservation.context.Context": [],
+  "MOBservation.controller.CtMain": [],
   "MOBservation.controller.login.CtLogin": [],
+  "MOBservation.controller.mobservation.customers.CtMOBservationCustomersList": [],
+  "MOBservation.controller.mobservation.menu.CtMOBservationMenu": [],
+  "MOBservation.controller.mobservation.observations.CtMOBservationObservationsList": [],
+  "MOBservation.controller.mobservation.pictures.CtMOBservationPicturesList": [],
   "MOBservation.controller.navigation.CtNavigationLogin": [],
+  "MOBservation.controller.navigation.CtNavigationMOBservation": [],
+  "MOBservation.controller.navigation.common.CtNavigation": [],
   "MOBservation.form.login.VwLogin": [
     "widget.xVwLogin"
   ],
+  "MOBservation.model.Customer": [],
+  "MOBservation.model.Observation": [],
+  "MOBservation.model.Picture": [],
+  "MOBservation.store.Customers": [],
+  "MOBservation.store.Observations": [],
+  "MOBservation.store.Pictures": [],
   "MOBservation.view.Main": [
     "widget.main"
   ],
+  "MOBservation.view.login.VwLoginInformation": [
+    "widget.xVwLoginInformation"
+  ],
+  "MOBservation.view.mobservation.customers.VwMOBservationCustomersList": [
+    "widget.xVwMOBservationCustomersList"
+  ],
+  "MOBservation.view.mobservation.menu.VwMOBservationMenu": [
+    "widget.xVwMOBservationMenu"
+  ],
+  "MOBservation.view.mobservation.menu.carousel.VwMOBservationMenuCarousel": [
+    "widget.xVwMOBservationMenuCarousel"
+  ],
+  "MOBservation.view.mobservation.observations.VwMOBservationObservationsList": [
+    "widget.xVwMOBservationObservationsList"
+  ],
+  "MOBservation.view.mobservation.pictures.VwMOBservationPicturesList": [
+    "widget.xVwMOBservationPicturesList"
+  ],
   "MOBservation.view.navigation.VwNavigationLogin": [
     "widget.xNavigationLogin"
-  ]
+  ],
+  "MOBservation.view.navigation.VwNavigationMOBservation": [
+    "widget.xNavigationMOBservation"
+  ],
+  "MOBservation.view.navigation.common.VwNavigation": []
 });
