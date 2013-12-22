@@ -6,7 +6,8 @@ Ext.define('MOBservation.controller.navigation.CtNavigationMOBservation', {
             navigationView : 'xNavigationMOBservation',
             vwMOBservationMenu : 'xVwMOBservationMenu',
             vwMOBservationCustomersList : 'xVwMOBservationCustomersList',
-            vwMOBservationPicturesList     : 'xVwMOBservationPicturesList'
+            vwMOBservationPicturesList     : 'xVwMOBservationPicturesList',
+            vwMOBservationPicture : 'xVwMOBservationPicture'
         },
         control: {
             navigationView : {
@@ -23,6 +24,9 @@ Ext.define('MOBservation.controller.navigation.CtNavigationMOBservation', {
             },
             vwMOBservationPicturesList : {
                 'PICTURE_SELECTED' : 'onPictureSelected'
+            },
+            xVwMOBservationPicture : {
+                'tap' : 'onTapMOBservationPicture'
             }
         }
     },
@@ -46,6 +50,12 @@ Ext.define('MOBservation.controller.navigation.CtNavigationMOBservation', {
         this.showView('xVwMOBservationPicturesList');
     },
     onPictureSelected : function (viewMOBservationMenu, pictureModel) {
-        alert('picture selected');
+       var pictureFullscreen = Ext.create('xVwMOBservationPicture', {
+            src : pictureModel.getData().picture
+       });
+       pictureFullscreen.show();
+    },
+    onTapMOBservationPicture : function (){
+        this.getVwMOBservationPicture().destroy();
     }
 });

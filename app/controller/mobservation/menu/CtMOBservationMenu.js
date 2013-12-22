@@ -68,13 +68,11 @@ Ext.define('MOBservation.controller.mobservation.menu.CtMOBservationMenu', {
     },
     onTapBtnListSounds : function (button) {
         if (Ext.device){
-            alert('ok');
             Ext.device.Capture.captureAudio({
                 maximumDuration: 15, // limit to 10 seconds per recording
-                success: function(files) {
-                    for (var i = 0; i < files.length; i++) {
-                        alert('Captured audio path: ', files[i].fullPath);
-                    };
+                success: function(file) {
+                        alert('sucess');
+                        alert('Captured audio path: ', file.fullPath);
                 },
                 failure: function() {
                     alert('Something went wrong!');

@@ -13,21 +13,22 @@ Ext.define('MOBservation.view.mobservation.menu.VwMOBservationMenu', {
 	],
 
 	config: {
+		cls : 'menu',
 		currentCustomer : null,
 		layout : 'vbox',
 		items : [
 			{
 				xtype : 'label',
-				html : MOBservation_strings.mobservation_welcome
+				html : MOBservation_strings.mobservation_welcome,
 			},
 			{
 				xtype : 'xVwMOBservationMenuCarousel',
-				flex : 5
+				flex : 3
 			},
 			{
 				xtype : 'label',
 				name : 'customerInformation',
-				flex : 1
+				flex : 3
 			}
 		]
 	},

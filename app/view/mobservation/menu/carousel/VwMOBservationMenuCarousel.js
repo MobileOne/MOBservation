@@ -11,6 +11,7 @@ Ext.define('MOBservation.view.mobservation.menu.carousel.VwMOBservationMenuCarou
 	],
 
 	config: {
+		cls : 'mobservation_carousel',
 		items : [
 			{
 				xtype : 'container',

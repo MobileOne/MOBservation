@@ -1,0 +1,31 @@
+.login {
+	margin: $GLOBAL-MARGIN;
+	.x-label {
+		font-size : $LOGIN-LABEL-FONT-SIZE;
+	}
+	.authentification {
+		margin: $LOGIN-AUTHENTIFICATION-MARGIN;
+		.emailfield {
+			margin-top : $LOGIN-AUTHENTIFICATION-MARGIN-SEPARATION-FIELDS;
+			margin-bottom : $LOGIN-AUTHENTIFICATION-MARGIN-SEPARATION-FIELDS;
+		}
+		.passwordfield {
+			margin-top : $LOGIN-AUTHENTIFICATION-MARGIN-SEPARATION-FIELDS;
+			margin-bottom : $LOGIN-AUTHENTIFICATION-MARGIN-SEPARATION-FIELDS;
+		}
+		.mobservation {
+			height : $LOGIN-AUTHENTIFICATION-IMG-HEIGHT;
+			width : $LOGIN-AUTHENTIFICATION-WIDTH;
+			margin : auto;
+			margin-top: $LOGIN-AUTHENTIFICATION-MARGIN-TOP;
+		}
+	}
+
+	.buttons {
+		.x-button-normal {
+			height: $LOGIN-BUTTONS-HEIGHT;
+			margin-right : $LOGIN-BUTTONS-MARGIN-VALUE;
+			margin-left : $LOGIN-BUTTONS-MARGIN-VALUE;
+		}
+	}
+}

@@ -11,6 +11,7 @@ Ext.define('MOBservation.view.navigation.VwNavigationMOBservation', {
     	'MOBservation.view.mobservation.menu.VwMOBservationMenu',
     	'MOBservation.view.mobservation.customers.VwMOBservationCustomersList',
     	'MOBservation.view.mobservation.observations.VwMOBservationObservationsList',
-    	'MOBservation.view.mobservation.pictures.VwMOBservationPicturesList'
+    	'MOBservation.view.mobservation.pictures.VwMOBservationPicturesList',
+    	'MOBservation.view.mobservation.pictures.VwMOBservationPicture'
     ]
 });
