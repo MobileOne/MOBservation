@@ -759,10 +759,11 @@ Ext.ClassManager.addNameAlternateMappings({
   "MOBservation.model.Customer": [],
   "MOBservation.model.Observation": [],
   "MOBservation.model.Picture": [],
+  "MOBservation.model.Sound": [],
   "MOBservation.store.Customers": [],
   "MOBservation.store.Observations": [],
   "MOBservation.store.Pictures": [],
-  "MOBservation.view.Main": [],
+  "MOBservation.store.Sounds": [],
   "MOBservation.view.login.VwLoginInformation": [
     "xVwLoginInformation"
   ],
@@ -778,8 +779,14 @@ Ext.ClassManager.addNameAlternateMappings({
   "MOBservation.view.mobservation.observations.VwMOBservationObservationsList": [
     "xVwMOBservationObservationsList"
   ],
+  "MOBservation.view.mobservation.pictures.VwMOBservationPicture": [
+    "xVwMOBservationPicture"
+  ],
   "MOBservation.view.mobservation.pictures.VwMOBservationPicturesList": [
     "xVwMOBservationPicturesList"
+  ],
+  "MOBservation.view.mobservation.sounds.VwMOBservationSoundsList": [
+    "xVwMOBservationSoundsList"
   ],
   "MOBservation.view.navigation.VwNavigationLogin": [
     "xNavigationLogin"
@@ -1747,12 +1754,11 @@ Ext.ClassManager.addNameAliasMappings({
   "MOBservation.model.Customer": [],
   "MOBservation.model.Observation": [],
   "MOBservation.model.Picture": [],
+  "MOBservation.model.Sound": [],
   "MOBservation.store.Customers": [],
   "MOBservation.store.Observations": [],
   "MOBservation.store.Pictures": [],
-  "MOBservation.view.Main": [
-    "widget.main"
-  ],
+  "MOBservation.store.Sounds": [],
   "MOBservation.view.login.VwLoginInformation": [
     "widget.xVwLoginInformation"
   ],
@@ -1768,8 +1774,14 @@ Ext.ClassManager.addNameAliasMappings({
   "MOBservation.view.mobservation.observations.VwMOBservationObservationsList": [
     "widget.xVwMOBservationObservationsList"
   ],
+  "MOBservation.view.mobservation.pictures.VwMOBservationPicture": [
+    "widget.xVwMOBservationPicture"
+  ],
   "MOBservation.view.mobservation.pictures.VwMOBservationPicturesList": [
     "widget.xVwMOBservationPicturesList"
+  ],
+  "MOBservation.view.mobservation.sounds.VwMOBservationSoundsList": [
+    "widget.xVwMOBservationSoundsList"
   ],
   "MOBservation.view.navigation.VwNavigationLogin": [
     "widget.xNavigationLogin"

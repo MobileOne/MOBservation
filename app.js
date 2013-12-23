@@ -43,13 +43,15 @@ Ext.application({
     models : [
         'Customer',
         'Observation',
-        'Picture'
+        'Picture',
+        'Sound'
     ],
 
     stores : [
         'Customers',
         'Observations',
-        'Pictures'
+        'Pictures',
+        'Sounds'
     ],
 
     forms : [

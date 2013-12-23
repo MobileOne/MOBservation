@@ -63,6 +63,7 @@ C:\GitHub\MOBservation\cordova\platforms\android\assets\www\plugins\org.apache.c
 C:\GitHub\MOBservation\cordova\platforms\android\assets\www\plugins\org.apache.cordova.media-capture\www\MediaFileData.js \
 C:\GitHub\MOBservation\cordova\platforms\android\assets\www\resources\css \
 C:\GitHub\MOBservation\cordova\platforms\android\assets\www\resources\icons \
+C:\GitHub\MOBservation\cordova\platforms\android\assets\www\resources\images \
 C:\GitHub\MOBservation\cordova\platforms\android\assets\www\resources\startup \
 C:\GitHub\MOBservation\cordova\platforms\android\assets\www\resources\css\app.css \
 C:\GitHub\MOBservation\cordova\platforms\android\assets\www\resources\icons\icon-spot~ipad.png \
@@ -73,6 +74,7 @@ C:\GitHub\MOBservation\cordova\platforms\android\assets\www\resources\icons\Icon
 C:\GitHub\MOBservation\cordova\platforms\android\assets\www\resources\icons\Icon~ipad.png \
 C:\GitHub\MOBservation\cordova\platforms\android\assets\www\resources\icons\Icon~ipad@2x.png \
 C:\GitHub\MOBservation\cordova\platforms\android\assets\www\resources\icons\iTunesArtwork.png \
+C:\GitHub\MOBservation\cordova\platforms\android\assets\www\resources\images\mobservation.png \
 C:\GitHub\MOBservation\cordova\platforms\android\assets\www\resources\startup\1496x2048.png \
 C:\GitHub\MOBservation\cordova\platforms\android\assets\www\resources\startup\1536x2008.png \
 C:\GitHub\MOBservation\cordova\platforms\android\assets\www\resources\startup\320x460.jpg \

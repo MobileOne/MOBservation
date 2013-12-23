@@ -393,7 +393,13 @@ public class Capture extends CordovaPlugin {
      * @throws IOException
      */
     private JSONObject createMediaFile(Uri data) {
+        // is thread checking enabled?
+        boolean thC = webView.getResourceApi().isThreadCheckingEnabled();       
+        // set thread checking to disabled (this works around mapUriToFile failing with IllegalStateException: Do not perform IO operations on the UI thread.
+        webView.getResourceApi().setThreadCheckingEnabled(false);       
         File fp = webView.getResourceApi().mapUriToFile(data);
+        // set thread checking back to whatever it was before the call above.
+        webView.getResourceApi().setThreadCheckingEnabled(thC);
         JSONObject obj = new JSONObject();
 
         try {

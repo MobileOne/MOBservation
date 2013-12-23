@@ -27,6 +27,8 @@ MOBservation_strings = {
 	mobservation_customer_selection : 'Vous prenez en charge le client ',
 	mobservation_picture : 'Photo n° ',
 	mobservation_pictures_empty_text : 'Aucune photo',
-	mobservation_pictures_ask_delete_picture : 'Voulez-vous supprimer cette photo ?'
-
+	mobservation_pictures_ask_delete_picture : 'Voulez-vous supprimer cette photo ?',
+	mobservation_pictures_take_picture_successed : 'La photo a été enregistrée.',
+	mobservation_sounds_take_sound_successed : 'La son a été enregistré.',
+	mobservation_sounds_empty_text : 'Aucun son',
 };

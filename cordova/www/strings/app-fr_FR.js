@@ -3,7 +3,7 @@ MOBservation_strings = {
 	login_label_authentification : 'Veuillez vous authentifier sur MOBservation',
 	login_input_label : 'E-mail',
 	login_input_label_placeHolder : 'Entrer votre adresse e-mail',
-	login_input_password : 'Mot de passe',
+	login_input_password : 'Password',
 	login_input_password_placeHolder : 'Entrer votre mot de passe',
 	login_valid : 'Valider',
 	login_noaccount : 'Créer un compte',
@@ -26,6 +26,9 @@ MOBservation_strings = {
 	mobservation_no_selected_customer : 'Aucun client sélectionné',
 	mobservation_customer_selection : 'Vous prenez en charge le client ',
 	mobservation_picture : 'Photo n° ',
-	mobservation_pictures_empty_text : 'Aucune photo'
-
+	mobservation_pictures_empty_text : 'Aucune photo',
+	mobservation_pictures_ask_delete_picture : 'Voulez-vous supprimer cette photo ?',
+	mobservation_pictures_take_picture_successed : 'La photo a été enregistrée.',
+	mobservation_sounds_take_sound_successed : 'La son a été enregistré.',
+	mobservation_sounds_empty_text : 'Aucun son',
 };

@@ -9,7 +9,8 @@ Ext.define('MOBservation.controller.mobservation.menu.CtMOBservationMenu', {
             btnObservations  : 'xVwMOBservationMenu button[name=observations]',
             btnTakePicture   : 'xVwMOBservationMenu button[name=picture]',
             btnListPictures  : 'xVwMOBservationMenu button[name=list_pictures]',
-            btnListSounds    : 'xVwMOBservationMenu button[name=sound]'
+            btnTakeSounds    : 'xVwMOBservationMenu button[name=sound]',
+            btnListSounds    : 'xVwMOBservationMenu button[name=list_sounds]'
         },
         control: {
             btnDisconnect : {
@@ -26,6 +27,9 @@ Ext.define('MOBservation.controller.mobservation.menu.CtMOBservationMenu', {
             },
             btnListPictures : {
                 'tap' : 'onTapBtnListPictures'
+            },
+            btnTakeSounds : {
+                'tap' : 'onTapBtnTakeSounds'
             },
             btnListSounds : {
                 'tap' : 'onTapBtnListSounds'
@@ -49,33 +53,42 @@ Ext.define('MOBservation.controller.mobservation.menu.CtMOBservationMenu', {
             Ext.device.Camera.capture({
                 success: function(image) {
                     var picturesStore = Ext.getStore('Pictures');
-
                     picturesStore.add({
                         picture : image
                     });
-
                     picturesStore.sync();
+                    Ext.Msg.alert(MOBservation_strings.app_name, MOBservation_strings.mobservation_pictures_take_picture_successed);
                 },
                 failure : function(){
                 },
                 quality: 75,
                 width: 200,
                 height: 200,
-                destination: 'data',
+                destination: 'file',
                 source: 'camera'
             }, this);
         }
     },
     onTapBtnListSounds : function (button) {
+        this.getVwMOBservationMenu().fireEvent('LIST_SOUNDS', this.getVwMOBservationMenu());
+    },
+    onTapBtnTakeSounds : function (button) {
         if (Ext.device){
             Ext.device.Capture.captureAudio({
-                maximumDuration: 15, // limit to 10 seconds per recording
-                success: function(file) {
-                        alert('sucess');
-                        alert('Captured audio path: ', file.fullPath);
+                limit: 1,
+                maximumDuration: 30, // limit to 30 seconds per recording
+                success: function(files) {
+                    var soundsStore = Ext.getStore('Sounds');
+                    for (var i = 0; i < files.length; i++) {
+                        soundsStore.add({
+                            sound : files[i].fullPath
+                        });
+                    }
+                    soundsStore.sync();
+                    Ext.Msg.alert(MOBservation_strings.app_name, MOBservation_strings.mobservation_sounds_take_sound_successed);
                 },
                 failure: function() {
-                    alert('Something went wrong!');
+                    console.log('Something went wrong!');
                 }
             });
         }

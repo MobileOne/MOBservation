@@ -51,7 +51,8 @@ Ext.define('MOBservation.view.mobservation.menu.carousel.VwMOBservationMenuCarou
 							name: 'list_pictures'
 						},
 						{
-							text : MOBservation_strings.mobservation_list_sounds
+							text : MOBservation_strings.mobservation_list_sounds,
+							name: 'list_sounds'
 						}
 					]
 				}]
