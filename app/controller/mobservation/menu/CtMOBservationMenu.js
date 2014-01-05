@@ -4,15 +4,25 @@ Ext.define('MOBservation.controller.mobservation.menu.CtMOBservationMenu', {
     config: {
         refs: {
             vwMOBservationMenu : 'xVwMOBservationMenu',
+            vwMOBservationMenuFolder : 'xVwMOBservationMenuFolder',
             btnDisconnect : 'xVwMOBservationMenu button[name=disconnect]',
-            btnCustomer      : 'xVwMOBservationMenu button[name=customer]',
-            btnObservations  : 'xVwMOBservationMenu button[name=observations]',
+            btnCustomer      : 'xVwMOBservationMenuFolder button[name=customer]',
+            btnObservations  : 'xVwMOBservationMenuFolder button[name=observations]',
             btnTakePicture   : 'xVwMOBservationMenu button[name=picture]',
-            btnListPictures  : 'xVwMOBservationMenu button[name=list_pictures]',
+            btnListPictures  : 'xVwMOBservationMenuFolder button[name=list_pictures]',
             btnTakeSounds    : 'xVwMOBservationMenu button[name=sound]',
-            btnListSounds    : 'xVwMOBservationMenu button[name=list_sounds]'
+            btnListSounds    : 'xVwMOBservationMenuFolder button[name=list_sounds]',
+            btnFolder        : 'xVwMOBservationMenu button[name=folder]',
+            btnGeolocation   : 'xVwMOBservationMenuFolder button[name=geolocation]'
         },
         control: {
+            vwMOBservationMenu : {
+                'initialize' : 'onInitializeMOBservationMenu',
+                'updateCurrentCustomer' : 'onUpdateCurrentCustomerMOBservationMenu'
+            },
+            vwMOBservationMenuFolder : {
+                'initialize' : 'onInitializeMOBservationMenuFolder'
+            },
             btnDisconnect : {
                 'tap' : 'onTapBtnDisconnect'
             },
@@ -33,7 +43,32 @@ Ext.define('MOBservation.controller.mobservation.menu.CtMOBservationMenu', {
             },
             btnListSounds : {
                 'tap' : 'onTapBtnListSounds'
+            },
+            btnFolder : {
+                'tap' : 'onTapBtnFolder'
+            },
+            btnGeolocation : {
+                'tap' : 'onTapBtnGeolocation'
             }
+        }
+    },
+    onInitializeMOBservationMenu : function(view){
+        this.onUpdateCurrentCustomerMOBservationMenu(view, view.getCurrentCustomer());
+    },
+    onUpdateCurrentCustomerMOBservationMenu : function (view, newValue){
+        var customerData = Ext.getStore('Customers').getCustomer(newValue),
+            customerInformation = MOBservation_strings.mobservation_no_selected_customer;
+        if (customerData){
+            customerInformation = MOBservation_strings.mobservation_customer_selection + customerData.firstName + " " + customerData.lastName;
+            this.getVwMOBservationMenuFolder().setDisabledOldObservation(false);
+            this.getVwMOBservationMenuFolder().setDisabledSendObservation(false);
+        }
+        this.getVwMOBservationMenu().down('label[name=customerInformation]').setHtml(customerInformation);
+    },
+    onInitializeMOBservationMenuFolder : function (view) {
+        if (this.getVwMOBservationMenu().getCurrentCustomer()){
+            view.setDisabledOldObservation(false);
+            view.setDisabledSendObservation(false);
         }
     },
     onTapBtnDisconnect : function (button) {
@@ -47,6 +82,12 @@ Ext.define('MOBservation.controller.mobservation.menu.CtMOBservationMenu', {
     },
     onTapBtnListPictures : function (button) {
         this.getVwMOBservationMenu().fireEvent('LIST_PICTURES', this.getVwMOBservationMenu());
+    },
+    onTapBtnFolder : function(){
+        this.getVwMOBservationMenu().fireEvent('FOLDER', this.getVwMOBservationMenu());
+    },
+    onTapBtnGeolocation : function (button) {
+        this.getVwMOBservationMenu().fireEvent('GEOLOCATION', this.getVwMOBservationMenu());
     },
     onTapBtnTakePicture : function (button) {
         if (Ext.device){

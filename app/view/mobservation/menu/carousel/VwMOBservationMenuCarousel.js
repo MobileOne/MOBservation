@@ -106,10 +106,4 @@ Ext.define('MOBservation.view.mobservation.menu.carousel.VwMOBservationMenuCarou
 		]
 	},
 
-	setDisabledOldObservation : function (disable) {
-		this.down('button[name=observations]').setDisabled(disable);
-	},
-	setDisabledSendObservation : function (disable) {
-		this.down('button[name=send]').setDisabled(disable);
-	}
 });

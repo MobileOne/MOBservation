@@ -17,7 +17,15 @@ MOBservation_strings = {
 	mobservation_list_pictures : 'Liste des photos',
 	mobservation_list_sounds : 'Liste des sons',
 	mobservation_customer : 'Clients',
+	mobservation_folder : 'Dossier client',
 	mobservation_observations : 'Liste des anciens constats',
+	mobservation_geolocation : 'Adresse du constat',
+	mobservation_geolocation_label_latitude : 'Latitude',
+	mobservation_geolocation_label_longitude : 'Longitude',
+	mobservation_geolocation_get_location_label : 'Récupérer ma position',
+	mobservation_geolocation_save_location : 'Sauvegarder ma position',
+	mobservation_geolocation_error_no_latitude_longitude : 'Vous devez d\'abord vous géolocaliser.',
+	mobservation_geolocation_success_save_latitude_longitude : 'Votre position a bien été sauvegardée.',
 	mobservation_observations_pictures : 'photos',
 	mobservation_observations_sounds : 'sons',
 	mobservation_observations_empty_text : 'Aucun ancien constat',
@@ -31,4 +39,5 @@ MOBservation_strings = {
 	mobservation_pictures_take_picture_successed : 'La photo a été enregistrée.',
 	mobservation_sounds_take_sound_successed : 'La son a été enregistré.',
 	mobservation_sounds_empty_text : 'Aucun son',
+	mobservation_sounds_ask_delete_sound : 'Voulez-vous supprimer ce son ?'
 };

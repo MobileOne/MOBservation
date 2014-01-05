@@ -8,7 +8,6 @@ Ext.define('MOBservation.view.mobservation.menu.VwMOBservationMenu', {
 
    	requires : [
    		'Ext.Button',
-   		'MOBservation.view.mobservation.menu.carousel.VwMOBservationMenuCarousel',
    		'Ext.Label'
 	],
 
@@ -20,30 +19,94 @@ Ext.define('MOBservation.view.mobservation.menu.VwMOBservationMenu', {
 			{
 				xtype : 'label',
 				html : MOBservation_strings.mobservation_welcome,
+				flex : 1
 			},
 			{
-				xtype : 'xVwMOBservationMenuCarousel',
-				flex : 3
+				xtype : 'container',
+				layout: 'vbox',
+				flex : 5,
+				defaults :{
+					layout: 'hbox'
+				},
+				items : [
+					{
+						xtype : 'container',
+						flex : 1,
+						items : [
+							{
+								xtype : 'button',
+								text : MOBservation_strings.mobservation_take_picture,
+								name: 'picture',
+								flex : 1
+							},
+							{
+								xtype : 'label',
+								html : MOBservation_strings.mobservation_take_picture,
+								flex : 3
+							}
+						]
+					},
+					{
+						xtype : 'container',
+						flex : 1,
+						items : [
+							{
+								xtype : 'button',
+								text : MOBservation_strings.mobservation_get_sound,
+								name : 'sound',
+								flex : 1
+							},
+							{
+								xtype : 'label',
+								html : MOBservation_strings.mobservation_get_sound,
+								flex : 3
+							}
+						]
+					},
+					{
+						xtype : 'container',
+						flex : 1,
+						items : [
+							{
+								xtype : 'button',
+								text : MOBservation_strings.mobservation_folder,
+								name : 'folder',
+								flex : 1
+							},
+							{
+								xtype : 'label',
+								html : MOBservation_strings.mobservation_folder,
+								flex : 3
+							}
+						]
+					},
+					{
+						xtype : 'container',
+						flex : 1,
+						items : [
+							{
+								xtype : 'button',
+								text : MOBservation_strings.mobservation_disconnect,
+								name: 'disconnect',
+								flex : 1
+							},
+							{
+								xtype : 'label',
+								html : MOBservation_strings.mobservation_disconnect,
+								flex : 3
+							}
+						]
+					}
+				]
 			},
 			{
 				xtype : 'label',
 				name : 'customerInformation',
-				flex : 3
+				flex : 1
 			}
 		]
 	},
-	initialize : function(config){
-		this.initConfig(config);
-		this.updateCurrentCustomer(this.getCurrentCustomer());
+	updateCurrentCustomer : function(value){
+		this.fireEvent('updateCurrentCustomer', this, value);
 	},
-	updateCurrentCustomer : function (newValue){
-		var customerData = Ext.getStore('Customers').getCustomer(newValue),
-			customerInformation = MOBservation_strings.mobservation_no_selected_customer;
-		if (customerData){
-			customerInformation = MOBservation_strings.mobservation_customer_selection + customerData.firstName + " " + customerData.lastName;
-			this.down('xVwMOBservationMenuCarousel').setDisabledOldObservation(false);
-			this.down('xVwMOBservationMenuCarousel').setDisabledSendObservation(false);
-		}
-		this.down('label[name=customerInformation]').setHtml(customerInformation);
-	}
 });

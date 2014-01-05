@@ -7,7 +7,8 @@ Ext.define('MOBservation.controller.navigation.CtNavigationMOBservation', {
             vwMOBservationMenu : 'xVwMOBservationMenu',
             vwMOBservationCustomersList : 'xVwMOBservationCustomersList',
             vwMOBservationPicturesList     : 'xVwMOBservationPicturesList',
-            vwMOBservationPicture : 'xVwMOBservationPicture'
+            vwMOBservationPicture : 'xVwMOBservationPicture',
+            vwMOBservationGeolocation : 'xVwMOBservationGeolocation'
         },
         control: {
             navigationView : {
@@ -18,7 +19,9 @@ Ext.define('MOBservation.controller.navigation.CtNavigationMOBservation', {
                 'CUSTOMERS'   : 'onSelectCustomers',
                 'OBSERVATIONS' : 'onSelectObservations',
                 'LIST_PICTURES' : 'onListPictures',
-                'LIST_SOUNDS' : 'onListSounds'
+                'LIST_SOUNDS' : 'onListSounds',
+                'FOLDER'      : 'onFolder',
+                'GEOLOCATION' : 'onGeolocation'
             },
             vwMOBservationCustomersList : {
                 'CUSTOMER_SELECTED' : 'onCustomerSelected'
@@ -28,6 +31,9 @@ Ext.define('MOBservation.controller.navigation.CtNavigationMOBservation', {
             },
             xVwMOBservationPicture : {
                 'tap' : 'onTapMOBservationPicture'
+            },
+            vwMOBservationGeolocation : {
+                'LOCATION_SAVED' : 'onLocationSaved'
             }
         }
     },
@@ -53,6 +59,12 @@ Ext.define('MOBservation.controller.navigation.CtNavigationMOBservation', {
     onListSounds : function (viewMOBservationMenu) {
         this.showView('xVwMOBservationSoundsList');
     },
+    onFolder : function (viewMOBservationMenu) {
+        this.showView('xVwMOBservationMenuFolder');
+    },
+    onGeolocation : function (viewMOBservationMenu) {
+        this.showView('xVwMOBservationGeolocation');
+    },
     onPictureSelected : function (viewMOBservationMenu, pictureModel) {
         if (!this.getVwMOBservationPicture()){
            var pictureFullscreen = Ext.create('xVwMOBservationPicture', {
@@ -61,7 +73,10 @@ Ext.define('MOBservation.controller.navigation.CtNavigationMOBservation', {
            this.getNavigationView().push(pictureFullscreen);
         }
     },
-    onTapMOBservationPicture : function (){
+    onTapMOBservationPicture : function () {
         this.getNavigationView().pop();
+    },
+    onLocationSaved : function (vwMOBservationGeolocation) {
+        this.getNavigationView().pop(1);
     }
 });

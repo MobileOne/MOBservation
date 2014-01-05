@@ -37,7 +37,9 @@ Ext.application({
         'mobservation.menu.CtMOBservationMenu',
         'mobservation.customers.CtMOBservationCustomersList',
         'mobservation.observations.CtMOBservationObservationsList',
-        'mobservation.pictures.CtMOBservationPicturesList'
+        'mobservation.pictures.CtMOBservationPicturesList',
+        'mobservation.geolocation.CtMOBservationGeolocation',
+        'mobservation.sounds.CtMOBservationSoundsList'
     ],
 
     models : [
