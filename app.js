@@ -95,5 +95,14 @@ Ext.application({
                 }
             }
         );
+    },
+    showLoadingMask : function () {
+        Ext.Viewport.setMasked({    
+            xtype   : 'loadmask',
+            message : "",
+        });
+    },
+    hideLoadingMask : function () {
+        Ext.Viewport.setMasked(false);
     }
 });

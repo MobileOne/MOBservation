@@ -36,8 +36,18 @@ Ext.define('MOBservation.controller.mobservation.geolocation.CtMOBservationGeolo
         this.getVwMOBservationGeolocation().fireEvent('LOCATION_SAVED', this.getVwMOBservationGeolocation());
     },
     onTapBtnGeolocation : function (button) {
-        if (navigator.geolocation)
-            navigator.geolocation.getCurrentPosition(Ext.bind(this.getCurrentPosition, this));
+        MOBservation.app.showLoadingMask();
+        if (Ext.device && Ext.device.Geolocation) {
+            Ext.device.Geolocation.getCurrentPosition({
+                success: Ext.bind(this.getCurrentPosition, this),
+                failure: function() {
+                    console.log('something went wrong!');
+                }
+            }); 
+        } else {
+            if (navigator.geolocation)
+                navigator.geolocation.getCurrentPosition(Ext.bind(this.getCurrentPosition, this));
+        }
     },
     getCurrentPosition : function(position){
         this.getLatitudeField().setValue(position.coords.latitude);
@@ -53,11 +63,13 @@ Ext.define('MOBservation.controller.mobservation.geolocation.CtMOBservationGeolo
         //this.getAddessField().setValue()
     },
     onGeocoderSucceed : function(html_response){
+        MOBservation.app.hideLoadingMask();
         var response = JSON.parse(html_response.responseText),
             address = (response.results.length ? response.results[0].formatted_address : null);
         this.getAddressField().setValue(address);
     },
     onGeocoderFailed : function (error) {
+        MOBservation.app.hideLoadingMask();
         console.log(error);
     }
 });

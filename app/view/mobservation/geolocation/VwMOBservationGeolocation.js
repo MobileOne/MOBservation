@@ -14,11 +14,8 @@ Ext.define('MOBservation.view.mobservation.geolocation.VwMOBservationGeolocation
 
 	config: {
 		cls : 'geolocation',
+		title : MOBservation_strings.mobservation_geolocation,
 		items : [
-			{
-				xtype : 'label',
-				html : MOBservation_strings.mobservation_geolocation
-			},
 			{
 				xtype : 'container',
 				items : [
@@ -43,16 +40,19 @@ Ext.define('MOBservation.view.mobservation.geolocation.VwMOBservationGeolocation
 					},
 					{
 						xtype : 'container',
+						cls : 'container_geolocation',
 						layout: 'hbox',
 						items: [
 							{
 								xtype : 'label',
 								html : MOBservation_strings.mobservation_geolocation_get_location_label,
+								cls : 'label_geolocation',
 								flex : 1
 							},
 							{
 								xtype : 'button',
 								name : 'geolocation',
+								baseCls : 'button_geolocation',
 								flex : 1
 							}
 						]
@@ -60,6 +60,7 @@ Ext.define('MOBservation.view.mobservation.geolocation.VwMOBservationGeolocation
 					{
 						xtype : 'button',
 						name : 'save_geolocation',
+						cls : 'save_geolocation',
 						text: MOBservation_strings.mobservation_geolocation_save_location
 					}
 				]

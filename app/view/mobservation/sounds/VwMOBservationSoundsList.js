@@ -13,11 +13,8 @@ Ext.define('MOBservation.view.mobservation.sounds.VwMOBservationSoundsList', {
 
 	config: {
     layout: 'vbox',
+    title : MOBservation_strings.mobservation_list_sounds,
     items : [
-      {
-        xtype : 'label',
-        html :  MOBservation_strings.mobservation_list_sounds
-      },
       {
         xtype : 'list',
         store : 'Sounds',

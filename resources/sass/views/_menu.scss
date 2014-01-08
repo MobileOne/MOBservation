@@ -4,4 +4,26 @@
 			margin: $MENU-CAROUSEL-MARGIN;
 		}
 	}
+	.take_picture {
+		background: url(../images/photo1.png) no-repeat center;
+
+	}
+	.take_sound {
+		background: url(../images/mic.png) no-repeat center;
+	}
+	.customer_folder {
+		background: url(../images/folder_black.png) no-repeat center;
+	}
+	.disconnect {
+		background: url(../images/power_on.png) no-repeat center;
+	}
+	.home_button {
+		height: $MENU-BUTTON-SIZE;
+		width : $MENU-BUTTON-SIZE;
+	}
+	.x-label {
+		.x-innerhtml {
+			margin-top: $MENU-LABEL-MARGIN-TOP;
+		}
+	}
 }

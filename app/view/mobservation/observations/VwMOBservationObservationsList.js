@@ -13,11 +13,8 @@ Ext.define('MOBservation.view.mobservation.observations.VwMOBservationObservatio
 
 	config: {
     layout: 'vbox',
+    title : MOBservation_strings.mobservation_observations,
     items : [
-      {
-        xtype : 'label',
-        html :  MOBservation_strings.mobservation_observations
-      },
       {
         xtype : 'list',
         store : 'Observations',

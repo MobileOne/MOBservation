@@ -12,6 +12,7 @@ Ext.define('MOBservation.view.mobservation.customers.VwMOBservationCustomersList
 	],
 
 	config: {
+    title : MOBservation_strings.app_name,
     layout: 'vbox',
     items : [
       {

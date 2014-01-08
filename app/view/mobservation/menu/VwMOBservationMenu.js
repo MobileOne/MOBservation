@@ -15,6 +15,7 @@ Ext.define('MOBservation.view.mobservation.menu.VwMOBservationMenu', {
 		cls : 'menu',
 		currentCustomer : null,
 		layout : 'vbox',
+		title : MOBservation_strings.app_name,
 		items : [
 			{
 				xtype : 'label',
@@ -35,8 +36,8 @@ Ext.define('MOBservation.view.mobservation.menu.VwMOBservationMenu', {
 						items : [
 							{
 								xtype : 'button',
-								text : MOBservation_strings.mobservation_take_picture,
 								name: 'picture',
+								baseCls : 'home_button take_picture',
 								flex : 1
 							},
 							{
@@ -52,8 +53,8 @@ Ext.define('MOBservation.view.mobservation.menu.VwMOBservationMenu', {
 						items : [
 							{
 								xtype : 'button',
-								text : MOBservation_strings.mobservation_get_sound,
 								name : 'sound',
+								baseCls : 'home_button take_sound',
 								flex : 1
 							},
 							{
@@ -69,8 +70,8 @@ Ext.define('MOBservation.view.mobservation.menu.VwMOBservationMenu', {
 						items : [
 							{
 								xtype : 'button',
-								text : MOBservation_strings.mobservation_folder,
 								name : 'folder',
+								baseCls : 'home_button customer_folder',
 								flex : 1
 							},
 							{
@@ -86,8 +87,8 @@ Ext.define('MOBservation.view.mobservation.menu.VwMOBservationMenu', {
 						items : [
 							{
 								xtype : 'button',
-								text : MOBservation_strings.mobservation_disconnect,
 								name: 'disconnect',
+								baseCls : 'home_button disconnect',
 								flex : 1
 							},
 							{
@@ -102,7 +103,7 @@ Ext.define('MOBservation.view.mobservation.menu.VwMOBservationMenu', {
 			{
 				xtype : 'label',
 				name : 'customerInformation',
-				flex : 1
+				flex : 2
 			}
 		]
 	},

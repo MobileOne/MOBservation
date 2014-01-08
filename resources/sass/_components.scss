@@ -5,3 +5,25 @@
 .x-form-label {
 	color: $GLOBAL-LABEL-COLOR;
 }
+.x-toolbar-dark {
+	background-image : none;
+	background-color : black;
+	.x-button-myback {
+		background-image: none;
+		background-color: white;
+		&.x-button-pressing {
+			background-color: gray;
+			background-image: none;
+		}
+		.x-button-label {
+			color : black;
+			font-weight: bold;
+		}
+	}
+}
+
+.home_button {
+	&.x-item-disabled {
+		opacity: $GLOBAL-DISABLED-OPACITY;
+	}
+}

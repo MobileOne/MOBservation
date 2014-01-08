@@ -747,9 +747,11 @@ Ext.ClassManager.addNameAlternateMappings({
   "MOBservation.controller.CtMain": [],
   "MOBservation.controller.login.CtLogin": [],
   "MOBservation.controller.mobservation.customers.CtMOBservationCustomersList": [],
+  "MOBservation.controller.mobservation.geolocation.CtMOBservationGeolocation": [],
   "MOBservation.controller.mobservation.menu.CtMOBservationMenu": [],
   "MOBservation.controller.mobservation.observations.CtMOBservationObservationsList": [],
   "MOBservation.controller.mobservation.pictures.CtMOBservationPicturesList": [],
+  "MOBservation.controller.mobservation.sounds.CtMOBservationSoundsList": [],
   "MOBservation.controller.navigation.CtNavigationLogin": [],
   "MOBservation.controller.navigation.CtNavigationMOBservation": [],
   "MOBservation.controller.navigation.common.CtNavigation": [],
@@ -770,11 +772,14 @@ Ext.ClassManager.addNameAlternateMappings({
   "MOBservation.view.mobservation.customers.VwMOBservationCustomersList": [
     "xVwMOBservationCustomersList"
   ],
+  "MOBservation.view.mobservation.geolocation.VwMOBservationGeolocation": [
+    "xVwMOBservationGeolocation"
+  ],
   "MOBservation.view.mobservation.menu.VwMOBservationMenu": [
     "xVwMOBservationMenu"
   ],
-  "MOBservation.view.mobservation.menu.carousel.VwMOBservationMenuCarousel": [
-    "xVwMOBservationMenuCarousel"
+  "MOBservation.view.mobservation.menu.folder.VwMOBservationMenuFolder": [
+    "xVwMOBservationMenuFolder"
   ],
   "MOBservation.view.mobservation.observations.VwMOBservationObservationsList": [
     "xVwMOBservationObservationsList"
@@ -1742,9 +1747,11 @@ Ext.ClassManager.addNameAliasMappings({
   "MOBservation.controller.CtMain": [],
   "MOBservation.controller.login.CtLogin": [],
   "MOBservation.controller.mobservation.customers.CtMOBservationCustomersList": [],
+  "MOBservation.controller.mobservation.geolocation.CtMOBservationGeolocation": [],
   "MOBservation.controller.mobservation.menu.CtMOBservationMenu": [],
   "MOBservation.controller.mobservation.observations.CtMOBservationObservationsList": [],
   "MOBservation.controller.mobservation.pictures.CtMOBservationPicturesList": [],
+  "MOBservation.controller.mobservation.sounds.CtMOBservationSoundsList": [],
   "MOBservation.controller.navigation.CtNavigationLogin": [],
   "MOBservation.controller.navigation.CtNavigationMOBservation": [],
   "MOBservation.controller.navigation.common.CtNavigation": [],
@@ -1765,11 +1772,14 @@ Ext.ClassManager.addNameAliasMappings({
   "MOBservation.view.mobservation.customers.VwMOBservationCustomersList": [
     "widget.xVwMOBservationCustomersList"
   ],
+  "MOBservation.view.mobservation.geolocation.VwMOBservationGeolocation": [
+    "widget.xVwMOBservationGeolocation"
+  ],
   "MOBservation.view.mobservation.menu.VwMOBservationMenu": [
     "widget.xVwMOBservationMenu"
   ],
-  "MOBservation.view.mobservation.menu.carousel.VwMOBservationMenuCarousel": [
-    "widget.xVwMOBservationMenuCarousel"
+  "MOBservation.view.mobservation.menu.folder.VwMOBservationMenuFolder": [
+    "widget.xVwMOBservationMenuFolder"
   ],
   "MOBservation.view.mobservation.observations.VwMOBservationObservationsList": [
     "widget.xVwMOBservationObservationsList"

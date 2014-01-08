@@ -42,6 +42,11 @@ C:\GitHub\MOBservation\cordova\platforms\android\bin\classes\org\apache\cordova\
 C:\GitHub\MOBservation\cordova\platforms\android\bin\classes\org\apache\cordova\file\InvalidModificationException.class \
 C:\GitHub\MOBservation\cordova\platforms\android\bin\classes\org\apache\cordova\file\NoModificationAllowedException.class \
 C:\GitHub\MOBservation\cordova\platforms\android\bin\classes\org\apache\cordova\file\TypeMismatchException.class \
+C:\GitHub\MOBservation\cordova\platforms\android\bin\classes\org\apache\cordova\geolocation\CordovaLocationListener$LocationTimeoutTask.class \
+C:\GitHub\MOBservation\cordova\platforms\android\bin\classes\org\apache\cordova\geolocation\CordovaLocationListener.class \
+C:\GitHub\MOBservation\cordova\platforms\android\bin\classes\org\apache\cordova\geolocation\GeoBroker.class \
+C:\GitHub\MOBservation\cordova\platforms\android\bin\classes\org\apache\cordova\geolocation\GPSListener.class \
+C:\GitHub\MOBservation\cordova\platforms\android\bin\classes\org\apache\cordova\geolocation\NetworkListener.class \
 C:\GitHub\MOBservation\cordova\platforms\android\bin\classes\org\apache\cordova\mediacapture\Capture$1.class \
 C:\GitHub\MOBservation\cordova\platforms\android\bin\classes\org\apache\cordova\mediacapture\Capture$2.class \
 C:\GitHub\MOBservation\cordova\platforms\android\bin\classes\org\apache\cordova\mediacapture\Capture.class \

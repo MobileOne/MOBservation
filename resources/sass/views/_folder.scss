@@ -1,0 +1,26 @@
+.folder {
+	.list_pictures {
+		background: url(../images/photo_black1.png) no-repeat center;
+	}
+	.list_sounds {
+		background: url(../images/mic.png) no-repeat center;
+	}
+	.geolocation {
+		background: url(../images/globe2.png) no-repeat center;
+	}
+	.customer {
+		background: url(../images/user_list.png) no-repeat center;
+	}
+	.observations {
+		background: url(../images/folder_lock.png) no-repeat center;
+	}
+	.send {
+		background: url(../images/check1.png) no-repeat center;
+	}
+	.home_button {
+		padding-top: $FOLDER_PADDING_TOP;
+		.x-button-label {
+			white-space: normal;
+		}	
+	}
+}

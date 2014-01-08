@@ -17,6 +17,7 @@ Ext.define('MOBservation.form.login.VwLogin', {
 	config: {
 		cls : 'login',
 		layout: 'vbox',
+		title : MOBservation_strings.app_name,
 		items : [
 			{
 				xtype : 'label',
@@ -26,7 +27,7 @@ Ext.define('MOBservation.form.login.VwLogin', {
 			{
 				xtype: 'container',
 				cls : 'authentification',
-				flex : 4,
+				flex : 5,
 				items: [
 				{
 					xtype : 'emailfield',
@@ -45,14 +46,13 @@ Ext.define('MOBservation.form.login.VwLogin', {
 				},
 				{
 					xtype: 'image',
-					src : 'resources/images/mobservation.png',
+					src : 'resources/images/marianne.jpg',
 					cls : 'mobservation'
 				}]
 			},
 			{
 				xtype : 'container',
 				cls : 'buttons',
-				flex : 4,
 				layout : 'hbox',
 				items : [
 					{

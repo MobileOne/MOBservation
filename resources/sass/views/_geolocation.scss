@@ -1,0 +1,21 @@
+.geolocation {
+
+	.container_geolocation {
+		margin-top: $GEOLOCATION_CONTAINER_GEOLOC_MARGIN_TOP;
+		.button_geolocation {
+			background: url(../images/locate2.png) no-repeat center;
+			height: $GEOLOCATION_CONTAINER_GEOLOC_BUTTON_SIZE;
+			width: $GEOLOCATION_CONTAINER_GEOLOC_BUTTON_SIZE;
+		}
+		.label_geolocation {
+			.x-innerhtml {
+				padding-top: $GEOLOCATION_LABEL_GEOLOC_PADDING_TOP;
+			}
+		}
+	}
+	.save_geolocation {
+		margin: auto;
+		width: $GEOLOCATION_BUTTON_SAVE_GEOLOC_WIDTH;
+		margin-top: $GEOLOCATION_BUTTON_SAVE_GEOLOC_MARGIN_TOP;
+	}
+}
