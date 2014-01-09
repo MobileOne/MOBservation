@@ -10,5 +10,9 @@ Ext.define('MOBservation.view.navigation.VwNavigationLogin', {
     requires : [
         'MOBservation.form.login.VwLogin',
         'MOBservation.view.login.VwLoginInformation'
-    ]
+    ],
+
+    config : {
+    	name : 'login'
+    }
 });

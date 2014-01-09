@@ -7,8 +7,9 @@ Ext.define("MOBservation.model.Observation", {
 		identifier : 'uuid',
 		fields:[
 			{name : "id" },
-			{name: "name", type: "string"},
+			{name: "title", type: "string"},
 			{name: "picturesCount", type: "int"},
+			{name: "soundsCount", type: "int"},
 			{name: "customer_id", type: "string"}
 		],
 		proxy: {

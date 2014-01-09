@@ -22,7 +22,7 @@ Ext.define('MOBservation.view.mobservation.customers.VwMOBservationCustomersList
       {
         xtype : 'list',
         store : 'Customers',
-        itemTpl: '{firstName} {lastName}',
+        itemTpl: '{first_name} {last_name}',
         flex: 1
       }
 		]

@@ -21,7 +21,8 @@ Ext.define('MOBservation.controller.navigation.CtNavigationMOBservation', {
                 'LIST_PICTURES' : 'onListPictures',
                 'LIST_SOUNDS' : 'onListSounds',
                 'FOLDER'      : 'onFolder',
-                'GEOLOCATION' : 'onGeolocation'
+                'GEOLOCATION' : 'onGeolocation',
+                'NO_LATITUDE_LONGITUDE' : 'onErrorNoLatitudeLongitude'
             },
             vwMOBservationCustomersList : {
                 'CUSTOMER_SELECTED' : 'onCustomerSelected'
@@ -78,5 +79,8 @@ Ext.define('MOBservation.controller.navigation.CtNavigationMOBservation', {
     },
     onLocationSaved : function (vwMOBservationGeolocation) {
         this.getNavigationView().pop(1);
+    },
+    onErrorNoLatitudeLongitude : function (viewMOBservationMenu) {
+        this.showView('xVwMOBservationGeolocation');
     }
 });

@@ -50,6 +50,9 @@
             "path": "strings/app-fr_FR.js"
         },
         {
+            "path": "config/Configuration.js"
+        },
+        {
             "path": "bootstrap.js",
             "x-bootstrap": true
         },

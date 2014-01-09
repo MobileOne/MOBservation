@@ -14,6 +14,7 @@ C:\GitHub\MOBservation\cordova\platforms\android\bin\res\drawable-xhdpi\icon.png
 C:\GitHub\MOBservation\cordova\platforms\android\assets\www \
 C:\GitHub\MOBservation\cordova\platforms\android\assets\www\app.js \
 C:\GitHub\MOBservation\cordova\platforms\android\assets\www\app.json \
+C:\GitHub\MOBservation\cordova\platforms\android\assets\www\config \
 C:\GitHub\MOBservation\cordova\platforms\android\assets\www\config.xml \
 C:\GitHub\MOBservation\cordova\platforms\android\assets\www\cordova.js \
 C:\GitHub\MOBservation\cordova\platforms\android\assets\www\cordova_plugins.js \
@@ -24,6 +25,7 @@ C:\GitHub\MOBservation\cordova\platforms\android\assets\www\js \
 C:\GitHub\MOBservation\cordova\platforms\android\assets\www\plugins \
 C:\GitHub\MOBservation\cordova\platforms\android\assets\www\resources \
 C:\GitHub\MOBservation\cordova\platforms\android\assets\www\strings \
+C:\GitHub\MOBservation\cordova\platforms\android\assets\www\config\Configuration.js \
 C:\GitHub\MOBservation\cordova\platforms\android\assets\www\css\index.css \
 C:\GitHub\MOBservation\cordova\platforms\android\assets\www\img\logo.png \
 C:\GitHub\MOBservation\cordova\platforms\android\assets\www\js\index.js \
@@ -92,6 +94,7 @@ C:\GitHub\MOBservation\cordova\platforms\android\assets\www\resources\images\pho
 C:\GitHub\MOBservation\cordova\platforms\android\assets\www\resources\images\photo_black1.png \
 C:\GitHub\MOBservation\cordova\platforms\android\assets\www\resources\images\power_on.png \
 C:\GitHub\MOBservation\cordova\platforms\android\assets\www\resources\images\user_list.png \
+C:\GitHub\MOBservation\cordova\platforms\android\assets\www\resources\images\video_black1.png \
 C:\GitHub\MOBservation\cordova\platforms\android\assets\www\resources\startup\1496x2048.png \
 C:\GitHub\MOBservation\cordova\platforms\android\assets\www\resources\startup\1536x2008.png \
 C:\GitHub\MOBservation\cordova\platforms\android\assets\www\resources\startup\320x460.jpg \

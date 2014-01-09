@@ -83,6 +83,8 @@ Ext.application({
         Ext.fly('appLoadingIndicator').destroy();
 
         this.context = Ext.create('MOBservation.context.Context');
+
+        document.addEventListener("backbutton", MOBservation.app.onBackPressed, false);
     },
 
     onUpdated: function() {
@@ -95,6 +97,19 @@ Ext.application({
                 }
             }
         );
+    },
+    onBackPressed : function() {
+    /*    if(Ext.Viewport.getActiveItem().config.name == "mobservation"){
+            var ctrlNav = MBapp.app.getController('MBapp.controller.CtrlNav');
+            ctrlNav.onBackPressed();
+            app.setAppWorking(false);
+        }
+        else if (Ext.Viewport.getActiveItem().config.name == "login"){
+            var ctrlNavLogin = MBapp.app.getController('MBapp.controller.CtrlNavLogin');
+            ctrlNavLogin.onBackPressed();
+            app.setAppWorking(false);               
+        } */
+        Ext.Viewport.getActiveItem().pop();
     },
     showLoadingMask : function () {
         Ext.Viewport.setMasked({    

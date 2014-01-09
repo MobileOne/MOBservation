@@ -13,7 +13,8 @@ Ext.define('MOBservation.controller.mobservation.menu.CtMOBservationMenu', {
             btnTakeSounds    : 'xVwMOBservationMenu button[name=sound]',
             btnListSounds    : 'xVwMOBservationMenuFolder button[name=list_sounds]',
             btnFolder        : 'xVwMOBservationMenu button[name=folder]',
-            btnGeolocation   : 'xVwMOBservationMenuFolder button[name=geolocation]'
+            btnGeolocation   : 'xVwMOBservationMenuFolder button[name=geolocation]',
+            btnSendObservation : 'xVwMOBservationMenuFolder [name=send]'
         },
         control: {
             vwMOBservationMenu : {
@@ -49,6 +50,9 @@ Ext.define('MOBservation.controller.mobservation.menu.CtMOBservationMenu', {
             },
             btnGeolocation : {
                 'tap' : 'onTapBtnGeolocation'
+            },
+            btnSendObservation : {
+                'tap' : 'onTapBtnSendObservation'
             }
         }
     },
@@ -59,7 +63,7 @@ Ext.define('MOBservation.controller.mobservation.menu.CtMOBservationMenu', {
         var customerData = Ext.getStore('Customers').getCustomer(newValue),
             customerInformation = MOBservation_strings.mobservation_no_selected_customer;
         if (customerData){
-            customerInformation = MOBservation_strings.mobservation_customer_selection + customerData.firstName + " " + customerData.lastName;
+            customerInformation = MOBservation_strings.mobservation_customer_selection + customerData.first_name + " " + customerData.last_name;
             this.getVwMOBservationMenuFolder().setDisabledOldObservation(false);
             this.getVwMOBservationMenuFolder().setDisabledSendObservation(false);
         }
@@ -114,8 +118,8 @@ Ext.define('MOBservation.controller.mobservation.menu.CtMOBservationMenu', {
         this.getVwMOBservationMenu().fireEvent('LIST_SOUNDS', this.getVwMOBservationMenu());
     },
     onTapBtnTakeSounds : function (button) {
-        if (Ext.device){
-            Ext.device.Capture.captureAudio({
+        if (Ext.device && Ext.device.Capture){
+            Ext.device.Capture.captureVideo({
                 limit: 1,
                 maximumDuration: 30, // limit to 30 seconds per recording
                 success: function(files) {
@@ -125,7 +129,6 @@ Ext.define('MOBservation.controller.mobservation.menu.CtMOBservationMenu', {
                             sound : files[i].fullPath
                         });
                     }
-                    soundsStore.sync();
                     Ext.Msg.alert(MOBservation_strings.app_name, MOBservation_strings.mobservation_sounds_take_sound_successed);
                 },
                 failure: function() {
@@ -133,5 +136,36 @@ Ext.define('MOBservation.controller.mobservation.menu.CtMOBservationMenu', {
                 }
             });
         }
+    },
+    onTapBtnSendObservation : function () {
+        if (MOBservation.app.context.getLatitude() && MOBservation.app.context.getLongitude()){
+            Ext.Msg.prompt(MOBservation_strings.app_name, MOBservation_strings.mobservation_send_ask_title_observation, Ext.bind(this.onPromptSendObservation, this));
+        } else {
+            Ext.Msg.alert(MOBservation_strings.app_name, MOBservation_strings.mobservation_send_error_no_latitude_longitude, Ext.bind(this.onErrorNoLatitudeLongitude, this));
+        }
+    },
+    onErrorNoLatitudeLongitude : function () {
+        this.getVwMOBservationMenu().fireEvent('NO_LATITUDE_LONGITUDE', this.getVwMOBservationMenu());
+    },
+    onPromptSendObservation : function (buttonId, value) {
+        if (buttonId == 'yes') {
+            this.sendObservation(value);
+        }
+    },
+    sendObservation : function (title) {
+        var idCustomer = MOBservation.app.context.getCurrentCustomer(),
+            idUser = MOBservation.app.context.getCurrentUser(),
+            latitude = MOBservation.app.context.getLatitude(),
+            longitude = MOBservation.app.context.getLongitude(),
+            pictures = Ext.getStore('Pictures').getData(),
+            sounds = Ext.getStore('Sounds').getData(),
+            title = title;
+        // TO-DO
+    },
+    sendObservationSuccess : function () {
+        // TO-DO
+    },
+    sendObservationFailure : function () {
+        // TO-DO
     }
 });

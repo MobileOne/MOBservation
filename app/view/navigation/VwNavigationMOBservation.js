@@ -16,5 +16,8 @@ Ext.define('MOBservation.view.navigation.VwNavigationMOBservation', {
     	'MOBservation.view.mobservation.pictures.VwMOBservationPicture',
         'MOBservation.view.mobservation.menu.folder.VwMOBservationMenuFolder',
         'MOBservation.view.mobservation.geolocation.VwMOBservationGeolocation'
-    ]
+    ],
+    config : {
+        name : 'mobservation'
+    }
 });

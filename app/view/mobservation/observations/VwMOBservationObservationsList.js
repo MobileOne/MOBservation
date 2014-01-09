@@ -17,9 +17,10 @@ Ext.define('MOBservation.view.mobservation.observations.VwMOBservationObservatio
     items : [
       {
         xtype : 'list',
+        disableSelection : true,
         store : 'Observations',
         emptyText : MOBservation_strings.mobservation_observations_empty_text,
-        itemTpl: '{name} : {picturesCount} ' + MOBservation_strings.mobservation_observations_pictures,
+        itemTpl: '{title} : {picturesCount} ' + MOBservation_strings.mobservation_observations_pictures + ', {soundsCount} ' + MOBservation_strings.mobservation_observations_sounds,
         flex: 1
       }
 		]

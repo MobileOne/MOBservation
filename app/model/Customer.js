@@ -7,8 +7,8 @@ Ext.define("MOBservation.model.Customer", {
 		identifier : 'uuid',
 		fields:[
 			{name : "id" },
-			{name: "firstName", type: "string"},
-			{name: "lastName", type: "string"}
+			{name: "first_name", type: "string"},
+			{name: "last_name", type: "string"}
 		],
 		proxy: {
             type: 'sessionstorage',

@@ -11,12 +11,8 @@ Ext.define('MOBservation.view.login.VwLoginInformation', {
 	],
 
 	config: {
-		title : MOBservation_strings.app_name,
+		title : MOBservation_strings.login_information_label,
 		items : [
-			{
-				xtype : 'label',
-				html  : MOBservation_strings.login_information_label
-			},
 			{
 				html : MOBservation_strings.login_information_description
 			}
