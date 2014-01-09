@@ -20,7 +20,8 @@ Ext.application({
         'Ext.MessageBox',
 
         // Context
-        'MOBservation.context.Context'
+        'MOBservation.context.Context',
+        'MOBservation.override.Override'
     ],
 
     views: [
@@ -84,6 +85,8 @@ Ext.application({
 
         this.context = Ext.create('MOBservation.context.Context');
 
+        MOBservation.override.Override.overrideStrings();
+
         document.addEventListener("backbutton", MOBservation.app.onBackPressed, false);
     },
 
@@ -99,25 +102,29 @@ Ext.application({
         );
     },
     onBackPressed : function() {
-    /*    if(Ext.Viewport.getActiveItem().config.name == "mobservation"){
-            var ctrlNav = MBapp.app.getController('MBapp.controller.CtrlNav');
-            ctrlNav.onBackPressed();
-            app.setAppWorking(false);
+        if (this.aPopUpIsShown()){
+            this.hidePopUp();
+        } else if (!Ext.Viewport.getMasked()) {
+            if (Ext.Viewport.getActiveItem().getInnerItems().length - 1){
+                Ext.Viewport.getActiveItem().pop();
+            } else {
+                navigator.app.exitApp();
+            }
         }
-        else if (Ext.Viewport.getActiveItem().config.name == "login"){
-            var ctrlNavLogin = MBapp.app.getController('MBapp.controller.CtrlNavLogin');
-            ctrlNavLogin.onBackPressed();
-            app.setAppWorking(false);               
-        } */
-        Ext.Viewport.getActiveItem().pop();
     },
     showLoadingMask : function () {
         Ext.Viewport.setMasked({    
             xtype   : 'loadmask',
-            message : "",
+            message : MOBservation_strings.loading
         });
     },
     hideLoadingMask : function () {
         Ext.Viewport.setMasked(false);
+    },
+    aPopUpIsShown : function () {
+        return Ext.Msg.isPainted();
+    },
+    hidePopUp : function () {
+        Ext.Msg.hide();
     }
 });

@@ -26,4 +26,11 @@
 	&.x-item-disabled {
 		opacity: $GLOBAL-DISABLED-OPACITY;
 	}
+	&.x-button-pressing {
+		opacity: $GLOBAL-PRESSING-OPACITY;
+	}
+}
+
+.x-msgbox {
+	border: 0.15em solid black;
 }

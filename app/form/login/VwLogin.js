@@ -22,12 +22,10 @@ Ext.define('MOBservation.form.login.VwLogin', {
 			{
 				xtype : 'label',
 				html  : MOBservation_strings.login_label_authentification,
-				flex : 1
 			},
 			{
 				xtype: 'container',
 				cls : 'authentification',
-				flex : 5,
 				items: [
 				{
 					xtype : 'emailfield',
@@ -57,13 +55,15 @@ Ext.define('MOBservation.form.login.VwLogin', {
 				items : [
 					{
 						xtype : 'button',
-						text : MOBservation_strings.login_noaccount,
+						text : MOBservation_strings.login_infos,
+						baseCls : 'home_button noaccount',
 						name : 'noaccount',
 						flex : 1
 					},
 					{
 						xtype : 'button',
 						text : MOBservation_strings.login_valid,
+						baseCls : 'home_button valid',
 						name : 'valid',
 						flex : 1
 					}

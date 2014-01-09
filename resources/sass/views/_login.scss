@@ -22,10 +22,19 @@
 	}
 
 	.buttons {
-		.x-button-normal {
-			height: $LOGIN-BUTTONS-HEIGHT;
-			margin-right : $LOGIN-BUTTONS-MARGIN-VALUE;
-			margin-left : $LOGIN-BUTTONS-MARGIN-VALUE;
+		margin-top: $LOGIN-BUTTONS-MARGIN-TOP;
+		.noaccount {
+			background: url(../images/info_plain.png) no-repeat center top;
+		}
+		.valid {
+			background: url(../images/check1.png) no-repeat center top;
+		}
+		.x-button-label {
+			padding-top : $LOGIN-BUTTONS-LABEL-PADDING-TOP;
 		}
 	}
+}
+
+.login_infos {
+	padding : $GLOBAL-MARGIN;
 }

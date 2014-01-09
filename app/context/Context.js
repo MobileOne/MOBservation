@@ -4,7 +4,7 @@ Ext.define('MOBservation.context.Context', {
 	    currentCustomer: null,
 	    currentUser : null,
 	    latitude : null,
-	    longitude: null,
+	    longitude: null
 	},
 
 	constructor: function(config) {
