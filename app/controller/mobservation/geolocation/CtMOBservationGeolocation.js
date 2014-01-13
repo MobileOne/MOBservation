@@ -25,7 +25,7 @@ Ext.define('MOBservation.controller.mobservation.geolocation.CtMOBservationGeolo
             longitude = this.getLongitudeField().getValue();
         if (latitude && longitude){
             MOBservation.app.context.setLatitude(latitude);
-            MOBservation.app.context.setLatitude(longitude);
+            MOBservation.app.context.setLongitude(longitude);
 
             Ext.Msg.alert(MOBservation_strings.app_name, MOBservation_strings.mobservation_geolocation_success_save_latitude_longitude, Ext.bind(this.onSuccessSaveLocation, this));
         } else {

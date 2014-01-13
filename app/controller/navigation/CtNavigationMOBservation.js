@@ -8,7 +8,9 @@ Ext.define('MOBservation.controller.navigation.CtNavigationMOBservation', {
             vwMOBservationCustomersList : 'xVwMOBservationCustomersList',
             vwMOBservationPicturesList     : 'xVwMOBservationPicturesList',
             vwMOBservationPicture : 'xVwMOBservationPicture',
-            vwMOBservationGeolocation : 'xVwMOBservationGeolocation'
+            vwMOBservationGeolocation : 'xVwMOBservationGeolocation',
+            vwMOBservationSoundsList : 'xVwMOBservationSoundsList',
+            vwMOBservationSound : 'VwMOBservationSound'
         },
         control: {
             navigationView : {
@@ -22,7 +24,9 @@ Ext.define('MOBservation.controller.navigation.CtNavigationMOBservation', {
                 'LIST_SOUNDS' : 'onListSounds',
                 'FOLDER'      : 'onFolder',
                 'GEOLOCATION' : 'onGeolocation',
-                'NO_LATITUDE_LONGITUDE' : 'onErrorNoLatitudeLongitude'
+                'NO_LATITUDE_LONGITUDE' : 'onErrorNoLatitudeLongitude',
+                'OBSERVATION_SENT' : 'onObservationSent',
+                'OBSERVATION_IS_NOT_SENT' : 'onObservationIsNotSent'
             },
             vwMOBservationCustomersList : {
                 'CUSTOMER_SELECTED' : 'onCustomerSelected'
@@ -35,6 +39,9 @@ Ext.define('MOBservation.controller.navigation.CtNavigationMOBservation', {
             },
             vwMOBservationGeolocation : {
                 'LOCATION_SAVED' : 'onLocationSaved'
+            },
+            vwMOBservationSoundsList : {
+                'SOUND_SELECTED' : 'onSoundSelected'
             }
         }
     },
@@ -68,10 +75,19 @@ Ext.define('MOBservation.controller.navigation.CtNavigationMOBservation', {
     },
     onPictureSelected : function (viewMOBservationMenu, pictureModel) {
         if (!this.getVwMOBservationPicture()){
-           var pictureFullscreen = Ext.create('xVwMOBservationPicture', {
-                src : pictureModel.getData().picture
-           });
+            console.log('picture = ' + pictureModel.getData().picture);
+           var pictureFullscreen = Ext.create('xVwMOBservationPicture');
+           pictureFullscreen.setSrc(pictureModel.getData().picture);
            this.getNavigationView().push(pictureFullscreen);
+        }
+    },
+    onSoundSelected : function (vwMOBservationSoundsList, soundModel) {
+        if (!this.getVwMOBservationSound()){
+            var sound = Ext.create('VwMOBservationSound', {
+                url : soundModel.getData().sound
+            });
+            this.getNavigationView().push(sound);
+            sound.play();
         }
     },
     onTapMOBservationPicture : function () {
@@ -82,5 +98,15 @@ Ext.define('MOBservation.controller.navigation.CtNavigationMOBservation', {
     },
     onErrorNoLatitudeLongitude : function (viewMOBservationMenu) {
         this.showView('xVwMOBservationGeolocation');
+    },
+    onObservationSent : function () {
+        this.resetMOBservation();
+    },
+    onObservationIsNotSent : function () {
+        this.resetMOBservation();
+    },
+    resetMOBservation : function () {
+        this.getNavigationView().pop();
+        MOBservation.app.context.reset();  
     }
 });

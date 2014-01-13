@@ -19,7 +19,7 @@ Ext.define('MOBservation.view.mobservation.sounds.VwMOBservationSoundsList', {
         xtype : 'list',
         store : 'Sounds',
         emptyText : MOBservation_strings.mobservation_sounds_empty_text,
-        itemTpl: '{id}',
+        itemTpl: '{name}',
         flex: 1
       }
 		]

@@ -7,7 +7,8 @@ Ext.define('MOBservation.view.login.VwLoginInformation', {
     xtype: 'xVwLoginInformation',
 
    	requires : [
-   		'Ext.Label'
+   		'Ext.Label',
+   		'Ext.Img'
 	],
 
 	config: {
@@ -15,7 +16,35 @@ Ext.define('MOBservation.view.login.VwLoginInformation', {
 		cls : 'login_infos',
 		items : [
 			{
-				html : MOBservation_strings.login_information_description
+				html : MOBservation_strings.login_information_description,
+				flex : 5
+			},
+			{
+				xtype : 'container',
+				flex : 1,
+				layout: 'hbox',
+				cls : 'portraits',
+				defaults:{
+					xtype : 'img',
+					flex : 1
+				},
+				items : [
+					{
+						cls : 'portrait fred'
+					},
+					{
+						cls : 'portrait nono'
+					},
+					{
+						cls : 'portrait bastien'
+					},
+					{
+						cls : 'portrait guillaume'
+					},
+					{
+						cls : 'portrait jeremy'
+					},
+				]
 			}
 		]
 	}

@@ -19,7 +19,7 @@ Ext.define('MOBservation.view.mobservation.pictures.VwMOBservationPicturesList',
         xtype : 'list',
         store : 'Pictures',
         emptyText : MOBservation_strings.mobservation_pictures_empty_text,
-        itemTpl: '{id}',
+        itemTpl: '{name}',
         flex: 1
       }
 		]

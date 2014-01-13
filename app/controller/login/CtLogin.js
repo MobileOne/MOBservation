@@ -51,8 +51,12 @@ Ext.define('MOBservation.controller.login.CtLogin', {
     onLoginSuccess : function (response) {
         MOBservation.app.hideLoadingMask();
         var user = Ext.JSON.decode(response.responseText);
-        MOBservation.app.context.setCurrentUser(user.id);
-        this.getVwLogin().fireEvent('USER_LOGGED', this.getVwLogin());
+        if (user == "Wrong user"){
+            Ext.Msg.alert(MOBservation_strings.app_name, MOBservation_strings.login_wrong_user);
+        } else {
+            MOBservation.app.context.setCurrentUser(user.id);
+            this.getVwLogin().fireEvent('USER_LOGGED', this.getVwLogin());
+        }
     },
     onLoginFailure : function (error) {
         MOBservation.app.hideLoadingMask();

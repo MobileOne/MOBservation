@@ -14,6 +14,9 @@ Ext.define('MOBservation.controller.mobservation.pictures.CtMOBservationPictures
         }
     },
     onItemTapPicturesList : function (list, index, domItem, item, eOpts){
+        if (MOBservation.app.aPopUpIsShown()){
+            return;
+        }
         this.getVwMOBservationPictures().fireEvent('PICTURE_SELECTED', this.getVwMOBservationPictures(), item);
     },
     onItemTapHoldPicturesList : function (list, index, domItem, item, eOpts) {

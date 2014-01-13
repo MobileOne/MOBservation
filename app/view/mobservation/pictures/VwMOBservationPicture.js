@@ -13,7 +13,8 @@ Ext.define('MOBservation.view.mobservation.pictures.VwMOBservationPicture', {
    	],
 
    	config : {
-   		style : 'background-size: auto;'
+   		height: '100%',
+      width: '100%'
    	},
 
    	onError : function (e) {

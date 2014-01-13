@@ -27,6 +27,7 @@ Ext.define('MOBservation.controller.CtMain', {
         this.showView('xNavigationMOBservation');
     },
     onUserDisconnected : function (vwNavigationMOBservation){
+        MOBservation.app.context.reset();
         this.showView('xNavigationLogin');
     }
 });

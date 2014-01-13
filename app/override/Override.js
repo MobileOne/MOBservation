@@ -21,6 +21,8 @@ Ext.define('MOBservation.override.Override', {
                 Ext.MessageBox.NO.text = MOBservation_strings.no;
                 Ext.MessageBox.YESNO[0].text = MOBservation_strings.no;
                 Ext.MessageBox.YESNO[1].text = MOBservation_strings.yes;
+                Ext.MessageBox.OKCANCEL[0].text = MOBservation_strings.cancel;
+                Ext.MessageBox.OKCANCEL[1].text = MOBservation_strings.ok;
             }
         }
     }

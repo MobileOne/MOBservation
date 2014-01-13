@@ -16,7 +16,8 @@ MOBservation_strings = {
 	login_error_is_not_an_email : 'Votre adresse email n\'est pas valide. Veuillez la corriger.',
 	login_error_no_password : 'Vous devez renseigner un mot de passe pour vous connecter',
 	login_error : 'Une erreur est survenue lors de l\'identification, veuillez réessayer ultérieurement.',
-	login_information_description : '<p align="justify">L\'application MOBservation a été développée dans le cadre d\'un projet étudiant de sécurité mobile, 3<sup>ième</sup> année du cycle CSII à l\'EPSI Bordeaux.</br>Elle permet, pour un huissier français, la possibilité de créer un constat chez un client donné en prenant des photos, vidéos et en indiquant l\'adresse du constat.</br>L\'équipe de projet est composée de Frédéric BARAILLON, Jérémy DUVAL, Bastien POIUDEVAIN, Geoffrey NOEL et Guillaume ROY. </br>Pour plus d\'informations sur le développement ou le contenu de cette application, contacter Frédéric BARAILLON (<a href="mailto:f.baraillon@gmail.com">f.baraillon@gmail.com</a>)</p>',
+	login_wrong_user : 'Le couple login / mot de passe est incorrect, veuillez corriger.',
+	login_information_description : '<p align="justify">L\'application MOBservation a été développée dans le cadre d\'un projet étudiant de sécurité mobile, 3<sup>ième</sup> année du cycle CSII à l\'EPSI Bordeaux.</br>Elle permet, pour un huissier français, la possibilité de créer un constat chez un client donné en prenant des photos, vidéos et en indiquant l\'adresse du constat.</br>L\'équipe de projet est composée de Frédéric BARAILLON, Jérémy DUVAL, Bastien POIDEVAIN, Geoffrey NOEL et Guillaume ROY. </br>Pour plus d\'informations sur le développement ou le contenu de cette application, contacter Frédéric BARAILLON (<a href="mailto:f.baraillon@gmail.com">f.baraillon@gmail.com</a>)</p>',
 	mobservation_disconnect  :'Déconnexion',
 	mobservation_take_picture : 'Prendre une photo',
 	mobservation_get_sound : 'Capturer une vidéo',
@@ -39,7 +40,8 @@ MOBservation_strings = {
 	mobservation_welcome : 'Bienvenue sur l\'application MOBservation',
 	mobservation_no_selected_customer : 'Aucun client sélectionné',
 	mobservation_customer_selection : 'Vous prenez en charge le client ',
-	mobservation_picture : 'Photo n° ',
+	mobservation_picture : 'Photo',
+	mobservation_sound : 'Vidéo',
 	mobservation_pictures_empty_text : 'Aucune photo',
 	mobservation_pictures_ask_delete_picture : 'Voulez-vous supprimer cette photo ?',
 	mobservation_pictures_take_picture_successed : 'La photo a été enregistrée.',
@@ -47,5 +49,7 @@ MOBservation_strings = {
 	mobservation_sounds_empty_text : 'Aucune vidéo',
 	mobservation_sounds_ask_delete_sound : 'Voulez-vous supprimer cette vidéo ?',
 	mobservation_send_error_no_latitude_longitude : 'Vous devez d\'abord vous géolocaliser pour envoyer le constat.',
-	mobservation_send_ask_title_observation : 'Titre du constat'
+	mobservation_send_ask_title_observation : 'Titre du constat',
+	mobservation_create_observation_error : 'Une erreur est survenue lors de la cration du constat. Veuillez réessayer ultérieurement.',
+	mobservation_send_error_pictures : 'Une erreur est survenue lors de l\'envoie des photos. Veuillez réessayer ultérieurement.'
 };

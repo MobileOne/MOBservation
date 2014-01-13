@@ -4,7 +4,11 @@ Ext.define('MOBservation.context.Context', {
 	    currentCustomer: null,
 	    currentUser : null,
 	    latitude : null,
-	    longitude: null
+	    longitude: null,
+	    currentObservation : null,
+	    uploadedSounds : 0,
+	    sounds : 0,
+	    errorDuringUploadSounds : false
 	},
 
 	constructor: function(config) {
@@ -15,6 +19,11 @@ Ext.define('MOBservation.context.Context', {
 	    this.setCurrentCustomer(null);
 	    this.setLatitude(null);
 	    this.setLongitude(null);
-	    this.setCurrentUser(null);
+	    this.setCurrentObservation(null);
+	    this.setUploadedSounds(0);
+	    this.setSounds(0);
+	    this.setErrorDuringUploadSounds(false);
+	    Ext.getStore('Pictures').removeAll();
+	    Ext.getStore('Sounds').removeAll();
     }
 });

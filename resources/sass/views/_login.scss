@@ -37,4 +37,26 @@
 
 .login_infos {
 	padding : $GLOBAL-MARGIN;
+	.portraits {
+		margin-top: 15px;
+	}
+	.portrait{
+		height: 89px;
+		width: 60px;
+		&.fred {
+			background: url(../images/fred.jpg) no-repeat center top;
+		}
+		&.nono {
+			background: url(../images/nono.jpg) no-repeat center top;
+		}
+		&.bastien {
+			background: url(../images/bastien.jpg) no-repeat center top;
+		}
+		&.guillaume {
+			background: url(../images/guillaume.jpg) no-repeat center top;
+		}
+		&.jeremy {
+			background: url(../images/jeremy.jpg) no-repeat center top;
+		}
+	}
 }

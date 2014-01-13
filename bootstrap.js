@@ -762,6 +762,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "MOBservation.model.Observation": [],
   "MOBservation.model.Picture": [],
   "MOBservation.model.Sound": [],
+  "MOBservation.override.Override": [],
   "MOBservation.store.Customers": [],
   "MOBservation.store.Observations": [],
   "MOBservation.store.Pictures": [],
@@ -789,6 +790,9 @@ Ext.ClassManager.addNameAlternateMappings({
   ],
   "MOBservation.view.mobservation.pictures.VwMOBservationPicturesList": [
     "xVwMOBservationPicturesList"
+  ],
+  "MOBservation.view.mobservation.sounds.VwMOBservationSound": [
+    "VwMOBservationSound"
   ],
   "MOBservation.view.mobservation.sounds.VwMOBservationSoundsList": [
     "xVwMOBservationSoundsList"
@@ -1762,6 +1766,7 @@ Ext.ClassManager.addNameAliasMappings({
   "MOBservation.model.Observation": [],
   "MOBservation.model.Picture": [],
   "MOBservation.model.Sound": [],
+  "MOBservation.override.Override": [],
   "MOBservation.store.Customers": [],
   "MOBservation.store.Observations": [],
   "MOBservation.store.Pictures": [],
@@ -1789,6 +1794,9 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "MOBservation.view.mobservation.pictures.VwMOBservationPicturesList": [
     "widget.xVwMOBservationPicturesList"
+  ],
+  "MOBservation.view.mobservation.sounds.VwMOBservationSound": [
+    "widget.VwMOBservationSound"
   ],
   "MOBservation.view.mobservation.sounds.VwMOBservationSoundsList": [
     "widget.xVwMOBservationSoundsList"

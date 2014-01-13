@@ -52,7 +52,7 @@ Ext.define('MOBservation.view.mobservation.geolocation.VwMOBservationGeolocation
 							{
 								xtype : 'button',
 								name : 'geolocation',
-								baseCls : 'button_geolocation',
+								baseCls : 'home_button button_geolocation',
 								flex : 1
 							}
 						]

@@ -33,7 +33,7 @@ Ext.define('MOBservation.controller.mobservation.observations.CtMOBservationObse
             var observation = {
                 customer_id : observations[i].customer.id,
                 picturesCount : observations[i].pictures.length,
-                soundsCount : observations[i].songs.length,
+                soundsCount : observations[i].sounds.length,
                 title : observations[i].title
             };
             Ext.getStore('Observations').add(observation);

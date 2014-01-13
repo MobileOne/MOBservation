@@ -88,6 +88,12 @@ Ext.application({
         MOBservation.override.Override.overrideStrings();
 
         document.addEventListener("backbutton", MOBservation.app.onBackPressed, false);
+
+        document.onkeypress = function(evt){
+            if(evt.keyCode == 32){
+                MOBservation.app.onBackPressed();          
+            }
+        }
     },
 
     onUpdated: function() {
@@ -102,9 +108,9 @@ Ext.application({
         );
     },
     onBackPressed : function() {
-        if (this.aPopUpIsShown()){
-            this.hidePopUp();
-        } else if (!Ext.Viewport.getMasked()) {
+        if (MOBservation.app.aPopUpIsShown()){
+                MOBservation.app.hidePopUp();
+        } else if (!Ext.Viewport.getMasked() || (Ext.Viewport.getMasked() && Ext.Viewport.getMasked().isHidden())) {
             if (Ext.Viewport.getActiveItem().getInnerItems().length - 1){
                 Ext.Viewport.getActiveItem().pop();
             } else {
