@@ -7,8 +7,7 @@ Ext.define('MOBservation.context.Context', {
 	    longitude: null,
 	    currentObservation : null,
 	    uploadedSounds : 0,
-	    sounds : 0,
-	    errorDuringUploadSounds : false
+	    sounds : 0
 	},
 
 	constructor: function(config) {
@@ -22,7 +21,6 @@ Ext.define('MOBservation.context.Context', {
 	    this.setCurrentObservation(null);
 	    this.setUploadedSounds(0);
 	    this.setSounds(0);
-	    this.setErrorDuringUploadSounds(false);
 	    Ext.getStore('Pictures').removeAll();
 	    Ext.getStore('Sounds').removeAll();
     }

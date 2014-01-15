@@ -50,6 +50,8 @@ MOBservation_strings = {
 	mobservation_sounds_ask_delete_sound : 'Voulez-vous supprimer cette vidéo ?',
 	mobservation_send_error_no_latitude_longitude : 'Vous devez d\'abord vous géolocaliser pour envoyer le constat.',
 	mobservation_send_ask_title_observation : 'Titre du constat',
-	mobservation_create_observation_error : 'Une erreur est survenue lors de la cration du constat. Veuillez réessayer ultérieurement.',
-	mobservation_send_error_pictures : 'Une erreur est survenue lors de l\'envoie des photos. Veuillez réessayer ultérieurement.'
+	mobservation_create_observation_error : 'Une erreur est survenue lors de la création du constat. Veuillez réessayer ultérieurement.',
+	mobservation_send_error_pictures : 'Une erreur est survenue lors de l\'envoie des photos. Veuillez réessayer ultérieurement.',
+	mobservation_send_error_sounds : 'Une erreur est survenue lors de l\'envoie des sons. Veuillez réessayer ultérieurement.',
+	mobservation_observation_sent : 'Le constat a été généré avec succès.'
 };

@@ -31,6 +31,7 @@ C:\GitHub\MOBservation\cordova\platforms\android\assets\www\img\logo.png \
 C:\GitHub\MOBservation\cordova\platforms\android\assets\www\js\index.js \
 C:\GitHub\MOBservation\cordova\platforms\android\assets\www\plugins\org.apache.cordova.camera \
 C:\GitHub\MOBservation\cordova\platforms\android\assets\www\plugins\org.apache.cordova.file \
+C:\GitHub\MOBservation\cordova\platforms\android\assets\www\plugins\org.apache.cordova.file-transfer \
 C:\GitHub\MOBservation\cordova\platforms\android\assets\www\plugins\org.apache.cordova.geolocation \
 C:\GitHub\MOBservation\cordova\platforms\android\assets\www\plugins\org.apache.cordova.media-capture \
 C:\GitHub\MOBservation\cordova\platforms\android\assets\www\plugins\org.apache.cordova.camera\www \
@@ -56,6 +57,9 @@ C:\GitHub\MOBservation\cordova\platforms\android\assets\www\plugins\org.apache.c
 C:\GitHub\MOBservation\cordova\platforms\android\assets\www\plugins\org.apache.cordova.file\www\ProgressEvent.js \
 C:\GitHub\MOBservation\cordova\platforms\android\assets\www\plugins\org.apache.cordova.file\www\requestFileSystem.js \
 C:\GitHub\MOBservation\cordova\platforms\android\assets\www\plugins\org.apache.cordova.file\www\resolveLocalFileSystemURI.js \
+C:\GitHub\MOBservation\cordova\platforms\android\assets\www\plugins\org.apache.cordova.file-transfer\www \
+C:\GitHub\MOBservation\cordova\platforms\android\assets\www\plugins\org.apache.cordova.file-transfer\www\FileTransfer.js \
+C:\GitHub\MOBservation\cordova\platforms\android\assets\www\plugins\org.apache.cordova.file-transfer\www\FileTransferError.js \
 C:\GitHub\MOBservation\cordova\platforms\android\assets\www\plugins\org.apache.cordova.geolocation\www \
 C:\GitHub\MOBservation\cordova\platforms\android\assets\www\plugins\org.apache.cordova.geolocation\www\Coordinates.js \
 C:\GitHub\MOBservation\cordova\platforms\android\assets\www\plugins\org.apache.cordova.geolocation\www\geolocation.js \

@@ -6,5 +6,7 @@ Configuration = {
 	observations_post_id : '/report.json',
 	createObservation : '/web/app_dev.php/api/reports.json',
 	sendOnePicture  : '/web/app_dev.php/api/pictures.json',
-	sendManyPictures :  '/web/app_dev.php/api/pictures/arrays.json'
+	sendManyPictures :  '/web/app_dev.php/api/pictures/arrays.json',
+	sendSounds_pre_id : '/web/app_dev.php/api/reports/',
+	sendSounds_post_id : '/sounds.json'
 };

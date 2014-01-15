@@ -175,7 +175,6 @@ Ext.define('MOBservation.controller.mobservation.menu.CtMOBservationMenu', {
         });
     },
     createObservationSuccess : function (response) {
-        MOBservation.app.hideLoadingMask();
         var newObservation = Ext.JSON.decode(response.responseText);
         MOBservation.app.context.setCurrentObservation(newObservation.id);
         this.sendObservationPictures(newObservation.id);
@@ -190,26 +189,28 @@ Ext.define('MOBservation.controller.mobservation.menu.CtMOBservationMenu', {
             sounds = Ext.getStore('Sounds').getData(),
             reportId = observationId;
 
-        MOBservation.app.showLoadingMask();
-
-        for (var i=0;i<storePictures.length;i++){
-            based64Pictures.push({
-                name : storePictures[i].getData().name,
-                data : storePictures[i].getData().picture
+        if (storePictures.length){
+            for (var i=0;i<storePictures.length;i++){
+                based64Pictures.push({
+                    name : storePictures[i].getData().name,
+                    data : storePictures[i].getData().picture
+                });
+            }
+            Ext.Ajax.request({
+                url: Configuration.urlBase + Configuration.sendManyPictures,
+                jsonData: {
+                    reportId : reportId,
+                    pictures : based64Pictures
+                },
+                success : Ext.bind(this.sendObservationPicturesSuccess, this),
+                failure : Ext.bind(this.sendObservationPicturesFailure, this)
             });
+        } else {
+            this.sendObservationPicturesSuccess();
         }
-        Ext.Ajax.request({
-            url: Configuration.urlBase + Configuration.sendManyPictures,
-            jsonData: {
-                reportId : reportId,
-                pictures : based64Pictures
-            },
-            success : Ext.bind(this.sendObservationPicturesSuccess, this),
-            failure : Ext.bind(this.sendObservationPicturesFailure, this)
-        });
     },
     sendObservationPicturesSuccess : function (response) {
-        MOBservation.app.hideLoadingMask();
+        this.sendObservationSounds();
     },
     sendObservationPicturesFailure : function (error) {
         MOBservation.app.hideLoadingMask();
@@ -217,37 +218,42 @@ Ext.define('MOBservation.controller.mobservation.menu.CtMOBservationMenu', {
     },
     sendObservationSounds : function () {
         var sounds = Ext.getStore('Sounds').getData().items,
-            observationId = MOBservation.app.context.getCurrentObservation();
+            observationId = MOBservation.app.context.getCurrentObservation(),
+            url = Configuration.urlBase + Configuration.sendSounds_pre_id + observationId + Configuration.sendSounds_post_id;
 
-        MOBservation.app.context.setSounds(sounds.length);
+        if (sounds.length){
+            MOBservation.app.context.setSounds(sounds.length);
 
-        MOBservation.app.showLoadingMask();
-
-        for (var i=0;i<sounds.length;i++){
-            Ext.Ajax.request({
-                url: Configuration.urlBase + Configuration.sendSounds_pre_id + observationId + Configuration.sendSounds_post_id,
-                success : Ext.bind(this.sendObservationSoundsSuccess, this),
-                failure : Ext.bind(this.sendObservationSoundsFailure, this)
-            });
-
+            for (var i=0;i<sounds.length;i++){
+                soundURI = sounds[i].getData().sound;
+                console.log('sound path :' + soundURI);
+                 
+                var options = new FileUploadOptions();
+                    options.fileKey="son";
+                    options.fileName=soundURI.substr(soundURI.lastIndexOf('/')+1);
+                    options.mimeType="video/mp4";
+                    options.chunkedMode = false;
+     
+                var ft = new FileTransfer();
+                ft.upload(soundURI, url, Ext.bind(this.sendObservationSoundsSuccess, this), Ext.bind(this.sendObservationSoundsFailure, this), options);
+            }
+        } else {
+            this.sendObservationSoundsSuccess(false);
         }
     },
-    sendObservationSoundsSuccess : function () {
-        MOBservation.app.context.setUploadedSounds(MOBservation.app.context.getUploadedSounds() + 1);
-        var sounds = MOBservation.app.context.getSounds(),
-            uploadedSounds = MOBservation.app.context.getUploadedSounds(),
-            errorDuringUploadSounds = MOBservation.app.context.getErrorDuringUploadSounds();
-        if (sounds == uploadedSounds && !errorDuringUploadSounds) {
-            alert('cest super');
-            this.resetMOBservation();
+    sendObservationSoundsSuccess : function (responseUpload) {
+        MOBservation.app.context.setUploadedSounds(MOBservation.app.context.getUploadedSounds()+1);
+        if (MOBservation.app.context.getUploadedSounds() == MOBservation.app.context.getSounds() || !responseUpload){
+            MOBservation.app.hideLoadingMask();
+            Ext.Msg.alert(MOBservation_strings.app_name, MOBservation_strings.mobservation_observation_sent, Ext.bind(this.resetMOBservation, this));
         }
     },
-    sendObservationSoundsFailure : function () {
-        console.log('sound is not sent');
-        MOBservation.app.context.setErrorDuringUploadSounds();
+    sendObservationSoundsFailure : function (error) {
+        MOBservation.app.hideLoadingMask();
+        Ext.Msg.alert(MOBservation_strings.app_name, MOBservation_strings.mobservation_send_error_sounds);
     },
     resetMOBservation : function () {
-        this.getVwMOBservationMenu().setCUrrentCustomer(null);
+        this.getVwMOBservationMenu().setCurrentCustomer(null);
         this.getVwMOBservationMenu().fireEvent('OBSERVATION_SENT', this.getVwMOBservationMenu()); 
     }
 });
